@@ -1,0 +1,111 @@
+header img
+{
+   margin-left: 30px;
+}
+
+header h4
+{
+    padding-left: 10px;
+}
+
+header ul
+{
+    padding-right: 40px;
+}
+
+.nav-link :active
+{
+    color: black;
+}
+
+nav
+{
+    height: 50vh;
+}
+
+
+.banner {
+    background: #333 url('banner.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 50px;
+    text-align: center;
+    
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.products
+{
+    margin-left: 50px;
+    padding: 50px;
+}
+
+.products h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.8em;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 23%;
+    margin-bottom: 20px;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-card h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.product-card .category {
+    color: #777;
+    margin: 10px 0;
+}
+
+.product-card .price {
+    font-size: 1.4em;
+    color: #333;
+}
+
+.product-card .price .discount {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 0.8em;
+    margin-left: 10px;
+}
+
+.product-card button {
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.product-card button:hover {
+    background: #0056b3;
+}
+
+

@@ -1,0 +1,7 @@
+header .nav .nav-item .nav-link.active{
+    background-color: gray;
+}
+
+.d-flex{
+    gap:20px;
+}
