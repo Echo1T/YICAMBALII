@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forgot-verification.css">
+    <title>Admin Backoffice - Verification</title>
+</head>
+<body>
+    <header class="admin-header">
+        <div class="logo-container">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/802f415fd648f5fe376581a94acb9c5e76a267cc513834179c5e1ed2e0fb6039?apiKey=c5ca74395eb04beca352be3a32114ffa&" class="logo" alt="YICAM BALI logo" />
+            <h1 class="company-name">YICAM BALI</h1>
+        </div>
+        <h2 class="app-name">Admin Backoffice</h2>
+    </header>
+
+    <main class="verification-container">
+        <div class="verification-form-wrapper">
+            <form class="signin-form" id="verification-form">
+                <h3 class="verification-title">ENTER VERIFICATION CODE</h3>
+                <div class="code-inputs">
+                    <input type="text" maxlength="1" class="input-field code-field" required />
+                    <input type="text" maxlength="1" class="input-field code-field" required />
+                    <input type="text" maxlength="1" class="input-field code-field" required />
+                    <input type="text" maxlength="1" class="input-field code-field" required />
+                </div>
+                <button type="submit" class="verification-button">Verify</button>
+                <div class="additional-links">
+                    <a href="forgot.html" class="resend-code">Resend Code</a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const codeFields = document.querySelectorAll('.code-field');
+            
+            codeFields.forEach((field, index) => {
+                field.addEventListener('input', (e) => {
+                    const value = e.target.value;
+                    if (value.length === 1 && index < codeFields.length - 1) {
+                        codeFields[index + 1].focus();
+                    }
+                });
+                
+                field.addEventListener('keydown', (e) => {
+                    if (e.key === 'Backspace' && !e.target.value && index > 0) {
+                        codeFields[index - 1].focus();
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #f6f7f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 24px 51px;
+    background-color: #fff;
+    color: #1a202c;
+    font-weight: 700;
+    line-height: 1.5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(195, 212, 233, 0.4);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 20px; /* Adjusted to be consistent with app-name */
+    letter-spacing: -0.96px;
+}
+
+.logo {
+    border-radius: 50%;
+    width: 40px; /* Adjusted size */
+    height: 40px; /* Ensure it's perfectly round */
+}
+
+.company-name {
+    font-family: Plus Jakarta Sans, sans-serif;
+    margin: auto 0;
+    font-size: 20px; /* Adjusted size */
+}
+
+.app-name {
+    font-family: Plus Jakarta Sans, sans-serif;
+    font-size: 20px;
+    letter-spacing: -0.72px;
+    margin: auto 0;
+    margin-right: 100px;
+}
+
+.signin-container {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: #f6f7f9;
+    font-size: 14px;
+    color: #90a3bf;
+    font-weight: 400;
+    line-height: 2;
+    padding: 80px 60px;
+    box-sizing: border-box;
+}
+
+.signin-form-wrapper {
+    display: flex;
+    width: 806px;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 61px 0 126px;
+    padding: 76px 60px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.signin-form {
+    display: flex;
+    width: 576px;
+    max-width: 100%;
+    flex-direction: column;
+    margin-bottom: 6px;
+}
+
+.signin-title {
+    color: #1a202c;
+    text-align: center;
+    letter-spacing: -0.96px;
+    align-self: center;
+    font: 700 32px/1.5 Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
+}
+
+.input-field {
+    font-family: Plus Jakarta Sans, sans-serif;
+    border-radius: 10px;
+    background-color: #f6f7f9;
+    margin-top: 35px;
+    padding: 23px 19px;
+}
+
+.signin-button {
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.12);
+    background-color: #011c2a;
+    margin-top: 32px;
+    color: #fff;
+    text-align: center;
+    padding: 15px 60px;
+    font: 500 16px Poppins, sans-serif;
+    border: none;
+    cursor: pointer;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+@media (max-width: 991px) {
+    .admin-header {
+        max-width: 100%;
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+    .signin-container {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    .signin-form-wrapper {
+        margin: 40px 0;
+        padding: 20px; /* Adjusted padding for mobile */
+    }
+    .input-field {
+        max-width: 100%;
+        padding-right: 20px;
+        white-space: initial;
+    }
+    .signin-button {
+        max-width: 100%;
+        padding: 15px 20px;
+    }
+}
