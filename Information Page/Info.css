@@ -1,0 +1,17 @@
+.d-flex{
+    gap:20px;
+}
+
+.hoovy{
+    transition: 0.3s;
+}
+
+.hoovy:hover{
+    height: 60px;
+    width: 60px;
+    transition: 0.3s;
+}
+
+header .nav .nav-item .nav-link.active{
+    background-color: gray;
+}
