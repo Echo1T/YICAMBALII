@@ -10,60 +10,67 @@
 </head>
 <body>
   <!--Header-->
-    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
-        <div class="d-flex align-items-center mb-3 mb-md-0 me-md-auto ">
+  <header>
+    <nav class="navbar navbar-expand-md">
+      <div class="container-fluid py-3 mb-4 border-bottom">
+        <div class="navbar-brand d-md-flex mb-3 mb-md-0 me-auto ">
           <a href="/YICAMBALII" class="link-body-emphasis text-decoration-none">
-            <img class="bi me-1 ms-5 mb-3" width="50" height="50" src="Assets/Logo.png">
+            <img class="bi me-1 ms-4 mb-3" width="50" height="50" src="Assets/Logo.png">
             <span class="fs-4">YICAMBALI</span>
           </a>
         </div>
-        
-  
-        <ul class="nav nav-pills">
-          <li class="nav-item">
-            <a href="/YICAMBALII" class="nav-link text-secondary-emphasis">
-              <img src="Assets/Home.png" class="me-2 mb-1" height="20" width="20" alt="">Home</a>
-          </li>
-          <li class="nav-item">
-            <a href="/YICAMBALII/Category Page/cam.html" class="nav-link text-secondary-emphasis">
-              <img src="Assets/Cate.png" class="me-2 mb-1" height="20" width="20" alt="">Category</a>
-          </li>
-          <li class="nav-item">
-            <a href="/YICAMBALII/Information Page/Info.html" class="nav-link text-secondary-emphasis">
-              <img src="Assets/Info.png" class="me-2 mb-1" height="20" width="20" alt="">Information</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link active">
-              <img src="Assets/Cont.png" class="me-2 mb-1" height="20" width="20" alt="">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link text-secondary-emphasis"><img src="Assets/LikedP.png" alt="" width="30" height="30"></a>
-          </li>
-        </ul>
-      </header>
+        <button class="navbar-toggler mb-3 me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="/YICAMBALII" class="nav-link active">
+                <img src="Assets/Home.png" class="me-2 mb-1" height="20" width="20" alt="">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="Category Page/cam.html" class="nav-link text-secondary-emphasis">
+                <img src="Assets/Cate.png" class="me-2 mb-1" height="20" width="20" alt="">Category</a>
+            </li>
+            <li class="nav-item">
+              <a href="Information Page/Info.html" class="nav-link text-secondary-emphasis">
+                <img src="Assets/Info.png" class="me-2 mb-1" height="20" width="20" alt="">Information</a>
+            </li>
+            <li class="nav-item">
+              <a href="Contact Page/Contact.html" class="nav-link text-secondary-emphasis">
+                <img src="Assets/Cont.png" class="me-2 mb-1" height="20" width="20" alt="">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link text-secondary-emphasis"><img src="Assets/LikedP.png" alt="" width="30" height="30"></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
     <!--Content-->
       <div class="container">
         <!--Contact Info-->
           <div class="row">
-              <div class="col md 5">
+              <div class="col-md-6">
                 <div class="h-100 p-5 text-bg-dark rounded-3">
                   <h2>Information Contact</h2>
                   <p>Rent Camera Bali</p>
 
                   <br><br>
 
-                  <div class="d-flex">
-                    <img width="40" height="32" src="Assets/phone.png" alt="">
+                  <div class="d-md-flex">
+                    <img width="40" height="32" src="Assets/phone.png" alt="" class="me-3">
                     <h5>0896-8602-7950</h5>
                   </div>
                   <br><br>
-                  <div class="d-flex">
-                    <img width="40" height="32" src="Assets/mail.png" alt="">
-                    <h5>paksurya@gmail.com</h5>
+                  <div class="d-md-flex">
+                    <img width="40" height="32" src="Assets/mail.png" alt="" class="me-3">
+                    <h5>Rentalkameradps@gmail.com</h5>
                   </div>
                   <br><br>
-                  <div class="d-flex">
-                    <img width="40" height="32" src="Assets/location.png" alt="">
+                  <div class="d-md-flex">
+                    <img width="40" height="32" src="Assets/location.png" alt="" class="me-3">
                     <h5>Jl. Pulau Moyo 1, Denpasar, Bali.</h5>
                   </div>
 
@@ -77,27 +84,27 @@
                 </div>
               </div>
               <!--Feedback n Shortcut Link to Category Page-->
-              <div class="col md 5">
+              <div class="col-md-6">
                 
                 <form action="mailto:krishnafazbunny@gmail.com" class="ms-4" method="post" enctype="text/plain">
                   <h2>Give Your Feedback</h2>
                   <div class="row">
-                    <div class="col">
+                    <div class="col-md-6">
                       <label for="First name" class="form-label">First Name</label>
                       <input type="text" class="form-control" placeholder="First name">
                     </div>
-                    <div class="col">
+                    <div class="col-md-6">
                       <label for="Last name" class="form-label">Last Name</label>
                       <input type="text" class="form-control" placeholder="Last name">
                     </div>
                   </div>
                   <br>
                   <div class="row">
-                    <div class="col">
+                    <div class="col-md-6">
                       <label for="Email" class="form-label">Email</label>
                       <input type="email" class="form-control" placeholder="Email">
                     </div>
-                    <div class="col">
+                    <div class="col-md-6">
                       <label for="Phone Number" class="form-label">Phone Number</label>
                       <input type="text" class="form-control" placeholder="Phone Number">
                     </div>
@@ -113,7 +120,7 @@
                   </div>
                 </form>
                 <br><br>
-                <div class="col md 5">
+                <div class="col">
                   <div class="row h-100 p-5 pe-3 ps-4 text-bg-dark rounded-3">
                     <div>
                       <img src="Assets/b1.png" alt="" class="float-end" width="200" height="200"> 
@@ -127,64 +134,71 @@
           </div>
       </div>
     <!--Footer-->
-      <footer class="row py-5 my-5 border-top">
-        <div class="col mb-3 ms-5">
-          <h2>YICAMBALII</h2>
-          <p class="text-body-secondary">Our vision is to provide convenience and help increase your sales business.</p>
-        </div>
-    
-        <div class="col mb-1">
-          <img src="Assets/Logo.png" alt="" class="nav flex-column" width="150" height="150">
-        </div>
-    
-        <div class="col mb-3">
-          <h5>About</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">How it works</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Featured</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Partnership</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Bussiness Relation</a></li>
-          </ul>
-        </div>
-    
-        <div class="col mb-3">
-          <h5>Community</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Events</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Blog</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Podcast</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Invite a friend</a></li>
-          </ul>
-        </div>
-    
-        <div class="col mb-3">
-          <h5>Socials</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Instagram</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">WhatsApp</a></li>
-            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Email</a></li>
-          </ul>
-        </div>
-
-        <div class="row py-5 my-5 border-top">
-          <div class="col mb-3 ms-5">
-            <p class="text-body-secondary"><b>©2024 YICAMBALI</b></p>
+    <footer class="footer py-5 my-5 border-top">
+      <div class="container">
+        <div class="row ms-auto">
+          <div class="col-md-2 mb-3 ms-2">
+            <h2>YICAMBALI</h2>
+            <p class="text-body-secondary">Our vision is to provide convenience and help increase your sales business.</p>
           </div>
       
-          <div class="col mb-1">
+          <div class="col-md mb-3 ms-5">
+            <img src="Assets/Logo.png" alt="" width="150" height="150">
           </div>
       
-          <div class="col mb-3">
+          <div class="col-md-2 mb-3">
+            <h5>About</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">How it works</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Featured</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Partnership</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Bussiness Relation</a></li>
+            </ul>
           </div>
       
-          <div class="col mb-3 ms-5">
-            <p><b>Privacy & Policy</b></p>
+          <div class="col-md-2 mb-3">
+            <h5>Backoffice</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="Backoffice/dashboard.html" class="nav-link p-0 text-body-secondary">Dashboard</a></li>
+              <li class="nav-item mb-2"><a href="Backoffice/login.html" class="nav-link p-0 text-body-secondary">Login</a></li>
+              <li class="nav-item mb-2"><a href="Backoffice/register.html" class="nav-link p-0 text-body-secondary">Register</a></li>
+              <li class="nav-item mb-2"><a href="Backoffice/forgot.html" class="nav-link p-0 text-body-secondary">Forgot Password</a></li>
+            </ul>
           </div>
       
-          <div class="col mb-3 ms-5">
-            <p><b>Terms & Condition</b></p>
+          <div class="col-md-2 mb-3">
+            <h5>Socials</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Instagram</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">WhatsApp</a></li>
+              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Email</a></li>
+            </ul>
           </div>
         </div>
-      </footer>
+        </div>
+      </div>
+      <div class="border-top">
+        <div class="container">
+          <div class="row ms-auto">
+            <div class="col-md-2 mb-3 ms-2">
+              <p class="text-body-secondary"><b>©2024 YICAMBALI</b></p>
+            </div>
+        
+            <div class="col-md mb-1">
+            </div>
+        
+            <div class="col-md mb-3">
+            </div>
+        
+            <div class="col-md-2 mb-3">
+              <p><b>Privacy & Policy</b></p>
+            </div>
+        
+            <div class="col-md-2 mb-3">
+              <p><b>Terms & Condition</b></p>
+            </div>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>
