@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Product</title>
+  <link rel="stylesheet" href="add_product.css">
+</head>
+<body>
+  <header class="admin-header">
+    <div class="logo-container">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/802f415fd648f5fe376581a94acb9c5e76a267cc513834179c5e1ed2e0fb6039?apiKey=c5ca74395eb04beca352be3a32114ffa&" alt="YICAM BALI Logo" class="logo" />
+      <h1 class="company-name">YICAM BALI</h1>
+    </div>
+    <h2 class="page-title">Admin Backoffice</h2>
+  </header>
+
+  <main class="main-content">
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <h3 class="menu-title">MAIN MENU</h3>
+        <a href="dashboard.html" class="menu-item">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3f74911d4f7cb5bdd671f4ed6cb4c9b2b74a36a9178ad99b7aaf78c69ba99de3?apiKey=c5ca74395eb04beca352be3a32114ffa&" alt="" class="menu-icon dashboard-icon" />
+          <span class="menu-text">Dashboard</span>
+        </a>
+        <a href="add_product.html" class="menu-item menu-item-active">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d0794731931f525e8ffd93ea1eee4eebc6ecb76fe036ad27733dc456649d573b?apiKey=c5ca74395eb04beca352be3a32114ffa&" alt="" class="menu-icon" />
+          <span class="menu-text">Add Product</span>
+        </a>
+        <a href="add_information.html" class="menu-item">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cd9ab3f7100da400834934a4e5d8446c60203a3a62249dd6ae7bda152e84d238?apiKey=c5ca74395eb04beca352be3a32114ffa&" alt="" class="menu-icon" />
+          <span class="menu-text">Add Information</span>
+        </a>
+        <a href="product_information.html" class="menu-item">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e3e809e2e4c650e4ca4389cc00a6c12d09cc4362f63061ebb41a537266bf7103?apiKey=c5ca74395eb04beca352be3a32114ffa&" alt="" class="menu-icon" />
+          <span class="menu-text">Product & Information</span>
+        </a>
+        <div class="active-indicator"></div>
+        <a href="#" class="logout-item">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/aeb51ebd07fdca8df9f959611bf1c0e756eab3342012082e98fc78a63828a562?apiKey=c5ca74395eb04beca352be3a32114ffa&" alt="" class="menu-icon" />
+          <span class="menu-text">Log Out</span>
+        </a>
+      </nav>
+
+      <section class="main-section">
+        <h3 class="section-title">Add Product & Category</h3>
+        <p class="section-subtitle">Please enter your product detail</p>
+        <form class="product-form">
+          <div class="form-group">
+            <label for="product-name">Product Name</label>
+            <input type="text" id="product-name" placeholder="Go Pro Hero 6">
+          </div>
+          <div class="form-group">
+            <label for="category">Category</label>
+            <input type="text" id="category" placeholder="Category">
+          </div>
+          <div class="form-group">
+            <label for="price">Price /day</label>
+            <input type="text" id="price" placeholder="Rp. 300.000">
+          </div>
+          <div class="form-group">
+            <label for="stock">Stock</label>
+            <input type="text" id="stock" placeholder="3">
+          </div>
+          <div class="form-group full-width">
+            <label for="image-upload">Add Image</label>
+            <input type="file" id="image-upload">
+          </div>
+          <button type="submit" class="submit-btn">Add Product</button>
+        </form>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

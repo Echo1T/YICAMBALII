@@ -1,373 +1,218 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #f6f7f9;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 .admin-header {
-    display: flex;
-    width: 100%;
-    gap: 20px;
-    padding: 24px 51px;
-    border: 1px solid rgba(195, 212, 233, 0.4);
-    background-color: #fff;
-    color: #1a202c;
-    font-weight: 700;
-    text-align: center;
-    line-height: 150%;
-  }
-  
-  .logo-container {
-    display: flex;
-    gap: 12px;
-    font-size: 32px;
-    letter-spacing: -0.96px;
-  }
-  
-  .logo {
-    aspect-ratio: 0.93;
-    object-fit: auto;
-    object-position: center;
-    width: 71px;
-  }
-  
-  .company-name {
-    flex-grow: 1;
-    margin: auto 0;
-    font-family: Plus Jakarta Sans, sans-serif;
-  }
-  
-  .page-title {
-    flex-grow: 1;
-    margin: auto 0;
-    font: 24px Plus Jakarta Sans, sans-serif;
-    letter-spacing: -0.72px;
-  }
-  
-  .main-content {
-    background-color: #f6f7f9;
-    width: 100%;
-    padding-right: 32px;
-  }
-  
-  .content-wrapper {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .sidebar {
-    display: flex;
-    flex-direction: column;
-    width: 21%;
-    border-right: 1px solid rgba(243, 245, 247, 1);
-    background-color: #fff;
-    padding: 42px 8px 42px 24px;
-    font-size: 16px;
-    color: #90a3bf;
-    font-weight: 500;
-    text-align: justify;
-    letter-spacing: -0.32px;
-    line-height: 24px;
-  }
-  
-  .menu-title {
-    color: rgba(148, 167, 203, 0.4);
-    letter-spacing: -0.24px;
-    margin-left: 17px;
-    font: 600 12px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-  }
-  
-  .menu-item {
-    display: flex;
-    gap: 12px;
-    margin: 32px 0 0 17px;
-  }
-  
-  .menu-item-active {
-    color: #fff;
-  }
-  
-  .menu-icon {
-    aspect-ratio: 1;
-    object-fit: auto;
-    object-position: center;
-    width: 24px;
-    margin: auto 0;
-  }
-  
-  .menu-text {
-    font-family: Plus Jakarta Sans, sans-serif;
-  }
-  
-  .active-indicator {
-    border-radius: 10px;
-    background-color: #596780;
-    align-self: stretch;
-    height: 56px;
-    margin-top: -222px;
-  }
-  
-  .logout-item {
-    align-self: stretch;
-    display: flex;
-    margin-top: 688px;
-    gap: 12px;
-  }
-  
-  .main-section {
-    display: flex;
-    flex-direction: column;
-    width: 79%;
-    margin-left: 20px;
-  }
-  
-  .quick-actions {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .action-card {
-    border-radius: 10px;
-    background-color: #fff;
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    padding: 29px 80px 51px 24px;
-    font-size: 20px;
-    color: #1a202c;
-    font-weight: 700;
-    letter-spacing: -0.6px;
-    line-height: 150%;
-  }
-  
-  .action-title {
-    font-family: Plus Jakarta Sans, sans-serif;
-    align-self: start;
-  }
-  
-  .action-icon {
-    aspect-ratio: 1.03;
-    object-fit: auto;
-    object-position: center;
-    width: 229px;
-    align-self: center;
-    max-width: 100%;
-  }
-  
-  .dashboard-panels {
-    margin-top: 32px;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .recent-products {
-    justify-content: center;
-    border-radius: 10px;
-    background-color: #fff;
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    width: 100%;
-    padding: 24px 0 24px 24px;
-  }
-  
-  .panel-header {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .panel-title {
-    color: #1a202c;
-    letter-spacing: -0.6px;
-    font: 700 20px/150% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-  }
-  
-  .view-all {
-    color: #3563e9;
-    text-align: right;
-    font: 500 12px/24px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-  }
-  
-  .product-item {
-    display: flex;
-    margin-top: 16px;
-    width: 100%;
-    gap: 20px;
-  }
-  
-  .product-image {
-    aspect-ratio: 1.89;
-    object-fit: auto;
-    object-position: center;
-    width: 132px;
-    max-width: 100%;
-  }
-  
-  .product-info {
-    display: flex;
-    flex-direction: column;
-    margin: auto 0;
-  }
-  
-  .product-name {
-    color: #1a202c;
-    letter-spacing: -0.32px;
-    font: 700 16px/150% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-  }
-  
-  .product-category {
-    color: #90a3bf;
-    letter-spacing: -0.24px;
-    margin-top: 8px;
-    font: 500 12px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-  }
-  
-  .product-details {
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    margin: auto 0;
-  }
-  
-  .product-date {
-    color: #90a3bf;
-    letter-spacing: -0.24px;
-    font: 500 12px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-  }
-  
-  .product-price {
-    color: #1a202c;
-    letter-spacing: -0.32px;
-    margin-top: 8px;
-    font: 700 16px/150% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-  }
-  
-  .divider {
-    background-color: rgba(195, 212, 233, 0.4);
-    margin-top: 15px;
-    height: 1px;
-    border: 1px solid rgba(195, 212, 233, 0.4);
-  }
-  
-  .recent-info {
-    justify-content: center;
-    border-radius: 10px;
-    background-color: #fff;
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    width: 100%;
-    padding: 24px;
-  }
-  
-  .info-item {
-    display: flex;
-    margin-top: 16px;
-    width: 100%;
-    gap: 20px;
-    justify-content: space-between;
-  }
-  
-  .info-image {
-    aspect-ratio: 1.89;
-    object-fit: auto;
-    object-position: center;
-    width: 132px;
-    max-width: 100%;
-  }
-  
-  .info-content {
-    display: flex;
-    flex-direction: column;
-    margin: auto 0;
-  }
-  
-  .info-title {
-    color: #1a202c;
-    letter-spacing: -0.32px;
-    font: 700 16px/150% Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-  }
-  
-  .info-category {
-    color: #90a3bf;
-    letter-spacing: -0.24px;
-    margin-top: 8px;
-    font: 500 12px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-  }
-  
-  .info-date {
-    color: #90a3bf;
-    text-align: right;
-    letter-spacing: -0.24px;
-    align-self: start;
-    margin-top: 11px;
-    font: 500 12px Plus Jakarta Sans, -apple-system, Roboto, Helvetica, sans-serif;
-  }
-  
-  @media (max-width: 991px) {
-    .admin-header {
-      max-width: 100%;
-      flex-wrap: wrap;
-      padding: 0 20px;
-    }
-  
-    .main-content {
-      max-width: 100%;
-      padding-right: 20px;
-    }
-  
-    .content-wrapper {
-      flex-direction: column;
-      align-items: stretch;
-      gap: 0;
-    }
-  
-    .sidebar {
-      width: 100%;
-      margin-top: 32px;
-      padding-left: 20px;
-    }
-  
-    .menu-title,
-    .menu-item {
-      margin-left: 10px;
-    }
-  
-    .active-indicator {
-      margin-top: -200px;
-    }
-  
-    .logout-item {
-      margin-top: 40px;
-    }
-  
-    .main-section {
-      width: 100%;
-      margin-left: 0;
-      margin-top: 40px;
-    }
-  
-    .quick-actions {
-      flex-direction: column;
-    }
-  
-    .action-card {
-      max-width: 100%;
-      margin-top: 32px;
-      padding: 0 20px;
-    }
-  
-    .dashboard-panels {
-      flex-direction: column;
-    }
-  
-    .recent-products,
-    .recent-info {
-      max-width: 100%;
-      margin-top: 37px;
-    }
-  
-    .product-item,
-    .info-item {
-      flex-wrap: wrap;
-    }
-  
-    .divider {
-      max-width: 100%;
-    }
-  }
-  
+  display: flex;
+  align-items: center;
+  padding: 24px 51px;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(195, 212, 233, 0.4);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 71px;
+  height: 71px;
+}
+
+.company-name {
+  font-size: 32px;
+  margin-left: 12px;
+}
+
+.page-title {
+  margin-left: auto;
+  font-size: 24px;
+  color: #1a202c;
+}
+
+.main-content {
+  display: flex;
+  flex-grow: 1;
+  padding: 24px;
+}
+
+.content-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  width: 270px;
+  background-color: #fff;
+  padding: 42px 8px 42px 24px;
+  border-right: 1px solid rgba(195, 212, 233, 0.4);
+}
+
+.menu-title {
+  color: rgba(148, 167, 203, 0.6);
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  color: #90a3bf;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.menu-item-active {
+  background-color: #4f535a;
+  color: #fff;
+}
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}
+
+.logout-item {
+  margin-top: auto;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  color: #90a3bf;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.main-section {
+  flex-grow: 1;
+  padding: 24px;
+}
+
+.quick-actions {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.action-card {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  height: 250px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.action-card:hover {
+  background-color: rgba(195, 212, 233, 0.4);
+  transform: translateY(-2px);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.action-title {
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #1a202c;
+}
+
+.action-icon {
+  width: 100px;
+  height: 100px;
+}
+
+.dashboard-panels {
+  display: flex;
+  gap: 24px;
+  flex-grow: 1;
+}
+
+.recent-products,
+.recent-info {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.panel-title {
+  font-size: 20px;
+  color: #1a202c;
+}
+
+.view-all {
+  font-size: 12px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.product-item,
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.product-image,
+.info-image {
+  width: 80px;
+  height: 80px;
+  margin-right: 16px;
+  object-fit: cover;
+}
+
+.product-info,
+.info-content {
+  flex-grow: 1;
+}
+
+.product-name,
+.info-title {
+  font-size: 16px;
+  color: #1a202c;
+  margin-bottom: 4px;
+}
+
+.product-category,
+.info-category {
+  font-size: 12px;
+  color: #90a3bf;
+}
+
+.product-details,
+.info-date {
+  font-size: 12px;
+  color: #90a3bf;
+}
+
+.divider {
+  background-color: rgba(195, 212, 233, 0.4);
+  height: 1px;
+  border: none;
+}
