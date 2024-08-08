@@ -12,6 +12,6 @@
     transition: 0.3s;
 }
 
-header .nav .nav-item .nav-link.active{
+.nav-item .nav-link.active{
     background-color: gray;
 }
