@@ -7,11 +7,15 @@
 }
 
 .hoovy:hover{
-    height: 60px;
-    width: 60px;
+    background-color: gray;
     transition: 0.3s;
 }
 
-header .nav .nav-item .nav-link.active{
+.nav-item .nav-link.active{
     background-color: gray;
 }
+
+.cimg{
+    height: 230px;
+}
+

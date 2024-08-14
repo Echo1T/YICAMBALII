@@ -12,6 +12,16 @@
     transition: 0.3s;
 }
 
+.navy{
+    transition: 0.3s;
+}
+
+.navy:hover{
+    background-color: gray;
+    color: white;
+    transition: 0.3s;
+}
+
 .nav-item .nav-link.active{
     background-color: gray;
 }
