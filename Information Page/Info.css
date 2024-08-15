@@ -13,6 +13,7 @@
 
 .nav-item .nav-link.active{
     background-color: gray;
+    color: white;
 }
 
 .cimg{

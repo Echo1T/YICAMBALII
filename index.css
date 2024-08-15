@@ -1,5 +1,6 @@
 .nav-item .nav-link.active{
     background-color: gray;
+    color: white;
 }
 
 .d-flex{
@@ -13,4 +14,17 @@
 .hoovy:hover{
     background-color: gray;
     transition: 0.3s;
+}
+
+.bimg1{
+    background-image: url('Assets/BG.png');
+}
+
+.bimg2{
+    background-image: url('Assets/BG1.png');
+}
+
+.bimg3{
+    background-image: url('Assets/BG2.png');
+    background-repeat:repeat-y;
 }

@@ -24,4 +24,15 @@
 
 .nav-item .nav-link.active{
     background-color: gray;
+    color: white;
+}
+
+.bimg1{
+    background-image: url('Assets/BG.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+.bimg2{
+    background-image: url('Assets/BG1.png');
 }
