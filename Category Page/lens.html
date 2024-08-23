@@ -7,6 +7,7 @@
     <link rel="icon" href="Assets/icon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
@@ -47,9 +48,9 @@
       </div>
     </nav>
   </header>
-    <div class="d-flex position-relative">
+    <div class="d-md-flex position-relative">
       <aside class="vh-100">
-        <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-light h-100" style="width: 280px;">
+        <div class="d-md-flex flex-column flex-shrink-0 p-3 text-white bg-light h-100" style="width: 280px;">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-black text-decoration-none">
             <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
             <span class="fs-4">Category</span>
@@ -98,66 +99,116 @@
               </div>  
             </div>
           </div>
-          <div class="container">
+          <div class="container-fluid">
               <h2>Popular Lens</h2>
-              <div class="product-grid">
-                  <div class="product-card">
-                      <h3>Sony Tele Lens</h3>
-                      <p class="category">Lens</p>
-                      <img src="Product_Images/Sony Tele Lens.png" alt="Sony a7 mark II">
+              <div class="row">
+                <div class="col-md-3 mb-3">
+                  <div class="card p-1 text-md-center">
+                    <h3 class="card-title text-truncate">Sony Tele Lens</h3>
+                    <p class="category">Lens</p>
+                    <img src="Product_Images/Sony Tele Lens.png" class="cimg card-img-top">
+                    <div class="card-body">
                       <p class="price">Rp. 100.000/day</p>
-                      <button class="bg-secondary">Rent Now</button>
+                      <p class="discount">-</p>
+                      <a href="#" class="d-grid btn btn-secondary">Rent Now</a>
+                    </div>
                   </div>
-                  <div class="product-card">
-                      <h3>Nikon af-s dx nikkor</h3>
-                      <p class="category">Lens</p>
-                      <img src="Product_Images/Nikon af-s dx nikkor.png" alt="Nikon D800">
-                      <p class="price">Rp. 150.000/day <span class="discount">Rp. 200.000</span></p>
-                      <button class="bg-secondary"><a href="DetailPage/DetailLens.html" class="text-decoration-none text-white">Rent Now</a></button>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                  <div class="card p-1 text-md-center">
+                    <h3 class="card-title text-truncate">Nikon af-s dx nikkor</h3>
+                    <p class="category">Lens</p>
+                    <img src="Product_Images/Nikon af-s dx nikkor.png" class="cimg card-img-top">
+                    <div class="card-body">
+                      <p class="price">Rp. 150.000/day</p>
+                      <p class="discount">Rp. 200.000/day</p>
+                      <a href="DetailPage/DetailLens.html" class="d-grid btn btn-secondary">Rent Now</a>
+                    </div>
                   </div>
-                  <div class="product-card">
-                      <h3>Canon EF 35mm Lens</h3>
-                      <p class="category">Lens</p>
-                      <img src="Product_Images/Canon EF 35mm Lens.png" alt="Canon 5d">
+                </div>
+
+                <div class="col-md-3 mb-3">
+                  <div class="card p-1 text-md-center">
+                    <h3 class="card-title text-truncate">Canon EF 35mm Lens</h3>
+                    <p class="category">Lens</p>
+                    <img src="Product_Images/Canon EF 35mm Lens.png" class="cimg card-img-top">
+                    <div class="card-body">
                       <p class="price">Rp. 200.000/day</p>
-                      <button class="bg-secondary">Rent Now</button>
+                      <p class="discount">-</p>
+                      <a href="#" class="d-grid btn btn-secondary">Rent Now</a>
+                    </div>
                   </div>
-                  <div class="product-card">
-                      <h3>Nikon AF-S VR Zoom-Nikkor 70-200mm</h3>
-                      <p class="category">Lens</p>
-                      <img src="Product_Images/Nikon AF-S VR Zoom-Nikkor 70-200mm.png" alt="Go Pro Hero 6">
-                      <p class="price">Rp. 180.000/day <span class="discount">Rp. 200.000</span></p>
-                      <button class="bg-secondary">Rent Now</button>
+                </div>
+
+                <div class="col-md-3 mb-3">
+                  <div class="card p-1 text-md-center">
+                    <h3 class="card-title text-truncate">Nikon AF-S VR Zoom-Nikkor 70-200mm</h3>
+                    <p class="category">Lens</p>
+                    <img src="Product_Images/Nikon AF-S VR Zoom-Nikkor 70-200mm.png" class="cimg card-img-top">
+                    <div class="card-body">
+                      <p class="price">Rp. 180.000/day</p>
+                      <p class="discount">Rp. 200.000/day</p>
+                      <a href="#" class="d-grid btn btn-secondary">Rent Now</a>
+                    </div>
                   </div>
-                  <div class="product-card">
-                    <h3>Canon EF-S 24mm</h3>
-                    <p class="category">Lens</p>
-                    <img src="Product_Images/Canon EF-S 24mm.jpg" alt="Sony a7 mark II">
-                    <p class="price">Rp. 100.000/day</p>
-                    <button class="bg-secondary">Rent Now</button>
                 </div>
-                <div class="product-card">
-                    <h3>Canon FD 55mm</h3>
+
+                <div class="col-md-3 mb-3">
+                  <div class="card p-1 text-md-center">
+                    <h3 class="card-title text-truncate">Canon EF-S 24mm</h3>
                     <p class="category">Lens</p>
-                    <img src="Product_Images/Canon FD 55mm.jpg" alt="Nikon D800">
-                    <p class="price">Rp. 150.000/day <span class="discount">Rp. 200.000</span></p>
-                    <button class="bg-secondary">Rent Now</button>
+                    <img src="Product_Images/Canon EF-S 24mm.jpg" class="cimg card-img-top">
+                    <div class="card-body">
+                      <p class="price">Rp. 100.000/day</p>
+                      <p class="discount">-</p>
+                      <a href="#" class="d-grid btn btn-secondary">Rent Now</a>
+                    </div>
+                  </div>
                 </div>
-                <div class="product-card">
-                    <h3>Canon EF 40mm Lens</h3>
+
+                <div class="col-md-3 mb-3">
+                  <div class="card p-1 text-md-center">
+                    <h3 class="card-title text-truncate">Canon FD 55mm</h3>
                     <p class="category">Lens</p>
-                    <img src="Product_Images/Canon EF 40mm.jpg" alt="Canon 5d">
-                    <p class="price">Rp. 200.000/day</p>
-                    <button class="bg-secondary">Rent Now</button>
+                    <img src="Product_Images/Canon FD 55mm.jpg" class="cimg card-img-top">
+                    <div class="card-body">
+                      <p class="price">Rp. 150.000/day</p>
+                      <p class="discount">Rp. 200.000/day</p>
+                      <a href="#" class="d-grid btn btn-secondary">Rent Now</a>
+                    </div>
+                  </div>
                 </div>
-                <div class="product-card">
-                    <h3>Canon EF 300mm Lens</h3>
+
+                <div class="col-md-3 mb-3">
+                  <div class="card p-1 text-md-center">
+                    <h3 class="card-title text-truncate">Canon EF 40mm Lens</h3>
                     <p class="category">Lens</p>
-                    <img src="Product_Images/Canon EF 300mm.jpg" alt="Go Pro Hero 6">
-                    <p class="price">Rp. 180.000/day <span class="discount">Rp. 200.000</span></p>
-                    <button class="bg-secondary">Rent Now</button>
+                    <img src="Product_Images/Canon EF 40mm.jpg" class="cimg card-img-top">
+                    <div class="card-body">
+                      <p class="price">Rp. 200.000/day</p>
+                      <p class="discount">-</p>
+                      <a href="#" class="d-grid btn btn-secondary">Rent Now</a>
+                    </div>
+                  </div>
                 </div>
-              </div>
+
+                <div class="col-md-3 mb-3">
+                  <div class="card p-1 text-md-center">
+                    <h3 class="card-title text-truncate">Canon EF 300mm Lens</h3>
+                    <p class="category">Lens</p>
+                    <img src="Product_Images/Canon EF 300mm.jpg" class="cimg card-img-top">
+                    <div class="card-body">
+                      <p class="price">Rp. 180.000/day</p>
+                      <p class="discount">Rp. 200.000/day</p>
+                      <a href="#" class="d-grid btn btn-secondary">Rent Now</a>
+                    </div>
+                  </div>
+                </div>
+                <ul class="pagination">
+                  <li class="page-item"><a class="page-link text-decoration-none text-body-secondary" href="#">Previous</a></li>
+                  <li class="page-item"><a class="page-link text-decoration-none text-body-secondary" href="#">Next</a></li>
+                </ul>
           </div>
       </section>
     </div>
