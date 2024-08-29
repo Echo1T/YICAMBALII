@@ -4,6 +4,11 @@
     transition: 0.2s;
 }*/
 
+.nav-item .nav-link.active{
+    background-color: gray;
+    color: white;
+}
+
 aside
 {
     height: 50vh;
@@ -27,10 +32,11 @@ aside
     background-size: 100% 100%;
 }
 
+/*New*/
 .products
 {
-    margin-left: 50px;
-    padding: 50px;
+    margin-left: 10px;
+    padding: 20px;
 }
 
 .products h2 {
@@ -46,11 +52,15 @@ aside
     margin-top: 20px;
 }
 
-.card {
+.card{
     background: #fff;
     border: 1px solid #eee;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 12rem;
+    margin-bottom: 20px;
 }
 
 .card:hover
@@ -105,12 +115,5 @@ aside
 
 .pagination{
     color: #333;
-}
-
-.card{
-    padding: 20px;
-    text-align: center;
-    width: 12rem;
-    margin-bottom: 20px;
 }
 

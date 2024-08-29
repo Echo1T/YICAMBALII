@@ -48,17 +48,15 @@ main {
 }
 
 .product-detail {
-    width: 80%;
     padding: 20px;
 }
 
 .product-info {
-    display: flex;
     gap: 20px;
 }
 
 .product-images {
-    width: 50%;
+    width: 500px;
     text-align: center;
     
 }
@@ -69,7 +67,6 @@ main {
 }
 
 .thumbnail-images {
-    display: flex;
     gap: 10px;
     margin-top: 10px;
 }
@@ -159,7 +156,6 @@ button {
 }
 
 .recommendation-list {
-    display: flex;
     gap: 20px;
     flex-wrap: wrap;
 }
@@ -182,4 +178,63 @@ button {
     transform: scale(1.1);
 }
 
+.card{
+    padding: 20px;
+    text-align: center;
+    width: 12rem;
+    margin-bottom: 20px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+.card:hover
+{
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+.card img {
+    width: auto;
+    height: 130px;
+}
+
+.card h3 {
+    font-size: 1.2em;
+    text-align: left;
+}
+
+.card .category {
+    color: #777;
+    margin: 10px 0;
+    text-align: left;
+}
+
+.card .price {
+    font-size: 1em;
+    color: #333;
+}
+
+.card .discount {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 0.8em;
+}
+
+.bttn {
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: 0.2s;
+    
+}
+
+.card button:hover 
+{
+    font-size: larger;
+    transition: 0.2s;
+}
