@@ -7,7 +7,8 @@
     <link rel="icon" href="Assets/icon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-</head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </head>
 <body>
   <header>
     <nav class="navbar navbar-expand-md">
@@ -28,11 +29,11 @@
                 <img src="Assets/Home.png" class="me-2 mb-1" height="20" width="20" alt="">Home</a>
             </li>
             <li class="nav-item">
-              <a href="/YICAMBALII/Category Page/acc.html" class="nav-link text-secondary-emphasis hoovy rounded-5">
+              <a href="/YICAMBALII/Category Page/acc.html" class="nav-link active rounded-3">
                 <img src="Assets/Cate.png" class="me-2 mb-1" height="20" width="20" alt="">Category</a>
             </li>
             <li class="nav-item">
-              <a href="/YICAMBALII/Information Page/Info.html" class="nav-link active rounded-3">
+              <a href="/YICAMBALII/Information Page/Info.html" class="nav-link text-secondary-emphasis hoovy rounded-5">
                 <img src="Assets/Info.png" class="me-2 mb-1" height="20" width="20" alt="">Information</a>
             </li>
             <li class="nav-item">
@@ -47,65 +48,74 @@
       </div>
     </nav>
   </header>
-    <div class="d-flex position-relative">
+    <div class="d-md-flex justify-content-between">
       <aside class="vh-100">
-        <div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-light h-100" style="width: 280px;">
-            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-black text-decoration-none">
+        <nav class="navbar navbar-expand-md">
+          <div class="d-md-flex flex-column flex-shrink-0 p-3 text-white bg-light h-100" style="width: 280px;">
+            <a href="/YICAMBALII/Category Page/cam.html" class="d-md-flex align-items-center mb-3 mb-md-0 me-md-auto text-black text-decoration-none">
             <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
             <span class="fs-4">Category</span>
             </a>
-            <hr>
-            <ul class="nav nav-pills flex-column mb-auto">
-            <li class="nav-item">
-                <a href="/YICAMBALII/Category Page/cam.html" class="nav-link text-black">
-                <svg class="bi me-2" width="16" height="16"><use xlink:href="#camera"></use></svg>
-                Camera
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="/YICAMBALII/Category Page/lens.html" class="nav-link active bg-secondary">
-                <svg class="bi me-2" width="16" height="16"><use xlink:href="#lensa"></use></svg>
-                Lensa
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="/YICAMBALII/Category Page/acc.html" class="nav-link text-black">
-                <svg class="bi me-2" width="16" height="16"><use xlink:href="#aksesoris"></use></svg>
-                Aksesoris
-                </a>
-            </li>
-            <li class="nav-item">
-                <a href="/YICAMBALII/Category Page/drone.html" class="nav-link text-black">
-                <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
-                Drone
-                </a>
-            </li>
-            </ul>
-            <hr>
+
+            <button class="navbar-toggler mb-3 ms-3" type="button" data-bs-toggle="collapse" data-bs-target="#CatP" aria-controls="CatP" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="CatP">
+              <hr>
+              <ul class="navbar-nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="/YICAMBALII/Category Page/cam.html" class="nav-link text-black">
+                    <svg class="bi me-2" width="16" height="16"><use xlink:href="#camera"></use></svg>
+                    Camera
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/YICAMBALII/Category Page/lens.html" class="nav-link text-black">
+                    <svg class="bi me-2" width="16" height="16"><use xlink:href="#lensa"></use></svg>
+                    Lensa
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/YICAMBALII/Category Page/acc.html" class="nav-link text-black">
+                    <svg class="bi me-2" width="16" height="16"><use xlink:href="#aksesoris"></use></svg>
+                    Aksesoris
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/YICAMBALII/Category Page/drone.html" class="nav-link text-black">
+                    <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
+                    Drone
+                    </a>
+                </li>
+                </ul>
+                <hr>
+            </div>
         </div>
-    </aside>
+        </nav>
+      </aside>
         <section class="product-detail">
-            <div class="product-info">
-                <div class="product-images">
+            <div class="product-info d-md-flex">
+                <div class="product-images img-fluid">
                     <img src="Product_Images/Sony Tele Lens.png" alt="Go Pro Hero 6">
-                    <div class="thumbnail-images">
-                        <img src="Product_Images/Sony Tele Lens.png" class="text-bg-light border border-dark border border-5" alt="Thumbnail 1">
-                        <img src="Product_Images/Sony Tele Lens View1.jpg" alt="Thumbnail 2">
-                        <img src="Product_Images/Sony Tele Lens View2.jpg" alt="Thumbnail 3">
+                    <div class="thumbnail-images d-md-flex justify-content-between">
+                      <img src="Product_Images/Sony Tele Lens.png" class="text-bg-light border border-dark border border-5" alt="Thumbnail 1">
+                      <img src="Product_Images/Sony Tele Lens View1.jpg" alt="Thumbnail 2">
+                      <img src="Product_Images/Sony Tele Lens View2.jpg" alt="Thumbnail 3">
                     </div>
                 </div>
-                <div class="product-description">
-                    <h1>Sony Tele Lens</h1>
-                    <div class="rating">
-                        <span>★★★★☆</span> 40+ Reviewer
-                    </div>
-                    <p>Zoom super-telefoto pertama dalam seri G Master unggulan Sony memiliki rentang 100 mm s/d 400 mm yang serbaguna.</p>
-                    <ul class="product-details">
-                        <li>Type: Lensa</li>
-                        <li>Stock: 6 Pcs</li>
-                        <li>Price: Rp. 200.000/day</li>
-                    </ul>
-                    <button class="bg-secondary"><a href="https://wa.me/628983158552" class="text-decoration-none text-white">Rent Now</a></button>
+                <div class="product-description text-md-start">
+                  <h1>Sony Tele Lens</h1>
+                  <div class="rating">
+                      <span>★★★★☆</span> 40+ Reviewer
+                  </div>
+                  <p>Zoom super-telefoto pertama dalam seri G Master unggulan Sony memiliki rentang 100 mm s/d 400 mm yang serbaguna.</p>
+                  <ul class="product-details">
+                      <li>Type: Lensa</li>
+                      <li>Stock: 6 Pcs</li>
+                      <li>Price: Rp. 200.000/day</li>
+                  </ul>
+                    <button class="bg-secondary"><a href="https://wa.me/6289686027950" class="text-decoration-none text-white">Rent Now</a></button>
                 </div>
             </div>
 
@@ -114,21 +124,21 @@
                 <ul class="review-list">
                     <li>
                         <div class="reviewer-info">
-                            <p class="reviewer-name">Umar</p>
-                            <p class="reviewer-role">Seorang Programmer</p>
+                            <p class="reviewer-name">Dani</p>
+                            <p class="reviewer-role">Seorang Fotografer</p>
                         </div>
-                        <p class="review-text">Alahhhh Bagus bet kameranya pak suryaaaaaaaa :)</p>
-                        <div class="review-date">1 July 2024</div>
+                        <p class="review-text">Lensanya berfungsi dengan lancar</p>
+                        <div class="review-date">25 July 2024</div>
                         <div class="review-rating">★★★★☆</div>
                     </li>
                     <li>
                         <div class="reviewer-info">
-                            <p class="reviewer-name">Adit</p>
-                            <p class="reviewer-role">Seorang Programmer</p>
+                            <p class="reviewer-name">Norma</p>
+                            <p class="reviewer-role">Seorang Fotografer</p>
                         </div>
-                        <p class="review-text">Anjayyy Gopro nya pak surya anjass !!!!!</p>
-                        <div class="review-date">27 July 2024</div>
-                        <div class="review-rating">★★★★☆</div>
+                        <p class="review-text">Lensa yang bagus boss!!</p>
+                        <div class="review-date">05 July 2024</div>
+                        <div class="review-rating">★★★★★</div>
                     </li>
                 </ul>
                 <button>Show All</button>
@@ -136,47 +146,113 @@
 
             <div class="recommendations">
                 <h2>Recommendation Camera</h2>
-                <div class="recommendation-list">
-                    <div class="recommendation-item">
-                        <img src="Product_Images/Canon 5D.png" alt="Sony Tele Lens">
-                        <p>Canon 5D</p>
-                        <p>Rp. 100.000/day</p>
-                        <button>Rent Now</button>
+                <div class="row d-md-flex">
+                  <div class="col-md-3 mb-3">
+                    <div class="card p-1 text-md-center">
+                      <h3 class="card-title text-truncate">Canon 5D</h3>
+                      <p class="category">Camera</p>
+                      <img src="Product_Images/Canon 5D.png" class="cimg card-img-top">
+                      <div class="card-body">
+                        <p class="price">Rp. 100.000/day</p>
+                        <p class="discount">-</p>
+                        <a href="#" class="d-grid btn btn-secondary">Rent Now</a>
+                      </div>
                     </div>
-                    <div class="recommendation-item">
-                        <img src="Product_Images/Nikon D800.png" alt="Nikon AF-S DX Nikkor">
-                        <p>Nikon D800</p>
-                        <p>Rp. 150.000/day (Rp. 200.000)</p>
-                        <button>Rent Now</button>
+                  </div>
+
+                  <div class="col-md-3 mb-3">
+                    <div class="card p-1 text-md-center">
+                      <h3 class="card-title text-truncate">Nikon d800</h3>
+                      <p class="category">Camera</p>
+                      <img src="Product_Images/Nikon D800.png" class="cimg card-img-top">
+                      <div class="card-body">
+                        <p class="price">Rp. 150.000/day</p>
+                        <p class="discount">Rp. 200.000/day</p>
+                        <a href="#" class="d-grid btn btn-secondary">Rent Now</a>
+                      </div>
                     </div>
-                    <div class="recommendation-item">
-                        <img src="Product_Images/Sony a7 mark2.png" alt="Canon EF 35mm Lens">
-                        <p>Sony A7 Mark II</p>
-                        <p>Rp. 200.000/day</p>
-                        <button>Rent Now</button>
+                  </div>
+
+                  <div class="col-md-3 mb-3">
+                    <div class="card p-1 text-md-center">
+                      <h3 class="card-title text-truncate">Sony A7 Mark II</h3>
+                      <p class="category">Camera</p>
+                      <img src="Product_Images/Sony a7 mark2.png" class="cimg card-img-top">
+                      <div class="card-body">
+                        <p class="price">Rp. 200.000/day</p>
+                        <p class="discount">-</p>
+                        <a href="#" class="d-grid btn btn-secondary">Rent Now</a>
+                      </div>
                     </div>
+                  </div>
+
+                  <div class="col-md-3 mb-3">
+                    <div class="card p-1 text-md-center">
+                      <h3 class="card-title text-truncate">Canon 1200D</h3>
+                      <p class="category">Camera</p>
+                      <img src="Product_Images/Canon 1200D.png" class="cimg card-img-top">
+                      <div class="card-body">
+                        <p class="price">Rp. 200.000/day</p>
+                        <p class="discount">-</p>
+                        <a href="#" class="d-grid btn btn-secondary">Rent Now</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 <h2>Recommendation Accessories</h2>
-                <div class="recommendation-list">
-                    <div class="recommendation-item">
-                        <img src="Product_Images/Tripod.png" alt="Tripod">
-                        <p>Tripod</p>
-                        <p>Rp. 100.000/day</p>
-                        <button>Rent Now</button>
+                <div class="row d-md-flex">
+                  <div class="col-md-3 mb-3">
+                    <div class="card p-1 text-md-center">
+                      <h3 class="card-title text-truncate">Tripod</h3>
+                      <p class="category">Accessories</p>
+                      <img src="Product_Images/Tripod.png" class="cimg card-img-top">
+                      <div class="card-body">
+                        <p class="price">Rp. 100.000/day</p>
+                        <p class="discount">-</p>
+                        <a href="#" class="d-grid btn btn-secondary">Rent Now</a>
+                      </div>
                     </div>
-                    <div class="recommendation-item">
-                        <img src="Product_Images/Camera Flashes.png" alt="Camera Flashes">
-                        <p>Camera Flashes</p>
-                        <p>Rp. 150.000/day (Rp. 200.000)</p>
-                        <button>Rent Now</button>
+                  </div>
+
+                  <div class="col-md-3 mb-3">
+                    <div class="card p-1 text-md-center">
+                      <h3 class="card-title text-truncate">Camera Flashes</h3>
+                      <p class="category">Accessories</p>
+                      <img src="Product_Images/Camera Flashes.png" class="cimg card-img-top">
+                      <div class="card-body">
+                        <p class="price">Rp. 150.000/day</p>
+                        <p class="discount">Rp. 200.000/day</p>
+                        <a href="#" class="d-grid btn btn-secondary">Rent Now</a>
+                      </div>
                     </div>
-                    <div class="recommendation-item">
-                        <img src="Product_Images/Camera Bag.png" alt="Camera Bag">
-                        <p>Camera Bag</p>
-                        <p>Rp. 200.000/day</p>
-                        <button>Rent Now</button>
+                  </div>
+
+                  <div class="col-md-3 mb-3">
+                    <div class="card p-1 text-md-center">
+                      <h3 class="card-title text-truncate">Camera Bag</h3>
+                      <p class="category">Accessories</p>
+                      <img src="Product_Images/Camera Bag.png" class="cimg card-img-top">
+                      <div class="card-body">
+                        <p class="price">Rp. 200.000/day</p>
+                        <p class="discount">-</p>
+                        <a href="#" class="d-grid btn btn-secondary">Rent Now</a>
+                      </div>
                     </div>
+                  </div>
+
+                  <div class="col-md-3 mb-3">
+                    <div class="card p-1 text-md-center">
+                      <h3 class="card-title text-truncate">Lens Filter</h3>
+                      <p class="category">Accessories</p>
+                      <img src="Product_Images/Lens Filters.png" class="cimg card-img-top">
+                      <div class="card-body">
+                        <p class="price">Rp. 200.000/day</p>
+                        <p class="discount">-</p>
+                        <a href="#" class="d-grid btn btn-secondary">Rent Now</a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
             </div>
         </section>
