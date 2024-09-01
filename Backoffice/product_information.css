@@ -1,200 +1,1102 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: #f6f7f9;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-  }
-  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #f6f7f9;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.admin-header {
+  display: flex;
+  align-items: center;
+  padding: 24px 51px;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(195, 212, 233, 0.4);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 71px;
+  height: 71px;
+}
+
+.company-name {
+  font-size: 32px;
+  margin-left: 12px;
+}
+
+.page-title {
+  margin-left: auto;
+  font-size: 24px;
+  color: #1a202c;
+}
+
+.main-content {
+  display: flex;
+  flex-grow: 1;
+  padding: 24px;
+}
+
+.content-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  width: 270px;
+  background-color: #fff;
+  padding: 42px 8px 42px 24px;
+  border-right: 1px solid rgba(195, 212, 233, 0.4);
+}
+
+.menu-title {
+  color: rgba(148, 167, 203, 0.6);
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  color: #90a3bf;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.menu-item-active {
+  background-color: #4f535a;
+  color: #fff;
+}
+
+.menu-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 12px;
+}
+
+.logout-item {
+  margin-top: auto;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  color: #90a3bf;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.dashboard-icon {
+  filter: invert(55%) sepia(6%) saturate(500%) hue-rotate(190deg) brightness(95%) contrast(80%);
+}
+
+.main-section {
+  flex-grow: 1;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.section-title {
+  font-size: 20px;
+  color: #1a202c;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: #90a3bf;
+  margin-bottom: 24px;
+}
+
+.dashboard-panels {
+  display: flex;
+  gap: 24px;
+  flex-grow: 1;
+}
+
+.recent-products,
+.recent-info {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.panel-title {
+  font-size: 20px;
+  color: #1a202c;
+}
+
+.view-all {
+  font-size: 12px;
+  color: #3563e9;
+  text-decoration: none;
+}
+
+.product-item,
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.product-item:hover,
+.info-item:hover {
+  background-color: rgba(195, 212, 233, 0.4);
+  transform: translateY(-2px);
+}
+
+.product-image,
+.info-image {
+  width: 80px;
+  height: 80px;
+  margin-right: 16px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-info,
+.info-content {
+  flex-grow: 1;
+}
+
+.product-name,
+.info-title {
+  font-size: 16px;
+  color: #1a202c;
+  margin-bottom: 4px;
+}
+
+.product-category,
+.info-category {
+  font-size: 12px;
+  color: #90a3bf;
+}
+
+.product-details,
+.info-date {
+  font-size: 12px;
+  color: #90a3bf;
+}
+
+.divider {
+  background-color: rgba(195, 212, 233, 0.4);
+  height: 1px;
+  border: none;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  width: 400px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content p {
+  margin-bottom: 30px;
+  font-size: 18px;
+  color: #333;
+}
+
+.logout-btn {
+  background-color: #4f535a;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.logout-btn:hover {
+  opacity: 0.9;
+}
+
+.cancel-btn {
+  background-color: transparent;
+  color: black;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.cancel-btn:hover {
+  color: #333;
+}
+
+/* CSS untuk Edit & Delete Modal */
+.large-modal-content {
+  width: 60%; /* Sesuaikan lebar modal sesuai keinginan */
+  max-width: 800px; /* Maksimal lebar modal */
+}
+
+.modal-content h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+  border-bottom: 1px solid #ccc; /* Garis pembatas antara judul dan form */
+  padding-bottom: 15px;
+}
+
+#editProductForm,
+#editInformationForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+#editProductForm .form-group,
+#editInformationForm .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+#editProductForm .form-group.full-width,
+#editInformationForm .form-group.full-width {
+  grid-column: span 2;
+}
+
+#editProductForm .form-group label,
+#editInformationForm .form-group label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+#editProductForm .form-group input[type="text"],
+#editProductForm .form-group input[type="number"],
+#editProductForm .form-group input[type="file"],
+#editInformationForm .form-group input[type="text"],
+#editInformationForm .form-group textarea,
+#editInformationForm .form-group input[type="file"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  resize: none;
+}
+
+#editInformationForm .form-group textarea,
+#editProductForm .form-group textarea {
+  width: 100%; /* Lebar penuh sesuai kolom */
+  height: 120px; /* Menambah tinggi textarea */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Tambahkan lengkungan pada pojok */
+  font-size: 16px;
+  resize: none; /* Mencegah perubahan ukuran oleh pengguna */
+  box-sizing: border-box; /* Memastikan padding termasuk dalam width dan height */
+}
+
+#editProductForm img,
+#editInformationForm img {
+  width: 200px; /* Sesuaikan ukuran gambar */
+  height: auto;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  grid-column: span 2;
+}
+
+.modal-buttons .submit-btn {
+  background-color: #2a2a72; /* Warna biru tua */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.modal-buttons .cancel-btn {
+  background-color: #6c757d; /* Warna abu-abu */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modal-buttons .delete-btn {
+  background-color: #f44336; /* Warna merah */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.modal-buttons .submit-btn:hover,
+.modal-buttons .cancel-btn:hover,
+.modal-buttons .delete-btn:hover {
+  opacity: 0.9;
+}
+
+#editProductForm .form-group img,
+#editInformationForm .form-group img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+#editProductForm input[type="file"],
+#editInformationForm input[type="file"] {
+  padding: 0;
+}
+
+.large-modal-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  width: 50%; /* Lebar sesuai gambar pertama */
+  max-width: 700px; /* Sesuaikan jika diperlukan */
+  margin: 0 auto;
+}
+
+.modal-content h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+#editProductForm .form-group label,
+#editInformationForm .form-group label {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+#editProductForm .form-group input,
+#editInformationForm .form-group input,
+#editInformationForm .form-group textarea {
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#editProductForm .form-group.full-width img,
+#editInformationForm .form-group.full-width img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+}
+
+.modal-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-buttons button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-buttons .submit-btn {
+  background-color: #2a2a72; /* Warna biru */
+  color: #fff;
+}
+
+.modal-buttons .cancel-btn {
+  background-color: #6c757d; /* Warna abu-abu */
+  color: #fff;
+}
+
+.modal-buttons .delete-btn {
+  background-color: #f44336; /* Warna merah */
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
   .admin-header {
-    display: flex;
-    align-items: center;
-    padding: 24px 51px;
-    background-color: #fff;
-    border-bottom: 1px solid rgba(195, 212, 233, 0.4);
+    flex-direction: column;
+    padding: 16px 24px;
   }
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo {
-    width: 71px;
-    height: 71px;
-  }
-  
-  .company-name {
-    font-size: 32px;
-    margin-left: 12px;
-  }
-  
+
   .page-title {
-    margin-left: auto;
-    font-size: 24px;
-    color: #1a202c;
+    margin-left: 0;
+    margin-top: 8px;
+    font-size: 20px;
+    text-align: center;
   }
-  
+
   .main-content {
-    display: flex;
-    flex-grow: 1;
-    padding: 24px;
+    flex-direction: column;
+    padding: 16px;
   }
-  
+
   .content-wrapper {
-    display: flex;
+    flex-direction: column;
     width: 100%;
   }
-  
+
   .sidebar {
-    width: 270px;
-    background-color: #fff;
-    padding: 42px 8px 42px 24px;
-    border-right: 1px solid rgba(195, 212, 233, 0.4);
+    width: 100%;
+    padding: 24px 16px;
+    border-right: none;
+    border-bottom: 1px solid rgba(195, 212, 233, 0.4);
   }
-  
-  .menu-title {
-    color: rgba(148, 167, 203, 0.6);
-    font-size: 12px;
-    margin-bottom: 16px;
-  }
-  
-  .menu-item {
-    display: flex;
-    align-items: center;
-    padding: 12px 16px;
-    color: #90a3bf;
-    text-decoration: none;
-    border-radius: 4px;
-    margin-bottom: 8px;
-  }
-  
-  .menu-item-active {
-    background-color: #4f535a;
-    color: #fff;
-  }
-  
-  .menu-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 12px;
-  }
-  
-  .logout-item {
-    margin-top: auto;
-    padding: 12px 16px;
-    display: flex;
-    align-items: center;
-    color: #90a3bf;
-    text-decoration: none;
-    border-radius: 4px;
-  }
-  
+
   .main-section {
-    flex-grow: 1;
-    padding: 24px;
-    background-color: #fff;
-    border-radius: 8px;
+    padding: 16px;
+    margin-top: 16px;
   }
-  
-  .section-title {
-    font-size: 20px;
-    color: #1a202c;
-    margin-bottom: 24px;
-  }
-  
+
   .dashboard-panels {
-    display: flex;
-    gap: 24px;
-    flex-grow: 1;
-  }
-  
-  .recent-products,
-  .recent-info {
-    flex: 1;
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 24px;
-    display: flex;
     flex-direction: column;
+    gap: 16px;
   }
-  
-  .panel-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-  }
-  
-  .panel-title {
-    font-size: 20px;
-    color: #1a202c;
-  }
-  
-  .view-all {
-    font-size: 12px;
-    color: #3563e9;
-    text-decoration: none;
-  }
-  
+
   .product-item,
   .info-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 16px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    padding: 12px;
-    border-radius: 8px;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .product-item:hover,
-  .info-item:hover {
-    background-color: rgba(195, 212, 233, 0.4);
-    transform: translateY(-2px);
-  }
-  
+
   .product-image,
   .info-image {
-    width: 80px;
-    height: 80px;
-    margin-right: 16px;
-    object-fit: cover;
-    border-radius: 8px;
+    margin-bottom: 12px;
+    width: 100%;
+    height: auto;
   }
-  
-  .product-info,
-  .info-content {
-    flex-grow: 1;
+
+  .modal-content {
+    width: 100%;
+    max-width: 90%;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .admin-header {
+    padding: 12px 16px;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .company-name {
+    font-size: 24px;
+  }
+
+  .page-title {
+    font-size: 18px;
+  }
+
+  .main-content {
+    padding: 12px;
+  }
+
+  .sidebar {
+    padding: 16px 8px;
+  }
+
+  .menu-item {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .menu-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .main-section {
+    padding: 12px;
+  }
+
+  .panel-title {
+    font-size: 18px;
+  }
+
   .product-name,
   .info-title {
-    font-size: 16px;
-    color: #1a202c;
-    margin-bottom: 4px;
+    font-size: 14px;
   }
-  
+
   .product-category,
   .info-category {
+    font-size: 10px;
+  }
+
+  .modal-content {
+    padding: 30px;
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .logout-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .cancel-btn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-header {
+    padding: 8px 12px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .company-name {
+    font-size: 20px;
+  }
+
+  .page-title {
+    font-size: 16px;
+  }
+
+  .main-content {
+    padding: 8px;
+  }
+
+  .sidebar {
+    padding: 12px 4px;
+  }
+
+  .menu-item {
+    padding: 8px 10px;
     font-size: 12px;
-    color: #90a3bf;
   }
-  
-  .product-details,
-  .info-date {
+
+  .menu-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .main-section {
+    padding: 8px;
+  }
+
+  .panel-title {
+    font-size: 16px;
+  }
+
+  .product-name,
+  .info-title {
+    font-size: 14px;
+  }
+
+  .product-category,
+  .info-category {
+    font-size: 10px;
+  }
+
+  .modal-content {
+    padding: 20px;
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .logout-btn {
+    padding: 8px 12px;
     font-size: 12px;
-    color: #90a3bf;
   }
-  
-  .divider {
-    background-color: rgba(195, 212, 233, 0.4);
-    height: 1px;
-    border: none;
+
+  .cancel-btn {
+    padding: 8px;
+    font-size: 12px;
   }
-  
+}
+/* Responsive Design for Mobile Devices */
+@media screen and (max-width: 768px) {
+  .logout-item {
+    padding: 10px 12px; /* Sesuaikan padding dengan menu-item lainnya */
+    font-size: 14px; /* Sesuaikan ukuran font dengan menu-item lainnya */
+  }
+
+  .logout-item .menu-icon {
+    width: 20px; /* Sesuaikan ukuran ikon dengan menu-item lainnya */
+    height: 20px;
+  }
+}
+
+/* Responsive Design for Small Devices (e.g., iPhone SE) */
+@media screen and (max-width: 480px) {
+  .logout-item {
+    padding: 8px 10px; /* Sesuaikan padding dengan menu-item lainnya */
+    font-size: 12px; /* Sesuaikan ukuran font dengan menu-item lainnya */
+  }
+
+  .logout-item .menu-icon {
+    width: 16px; /* Sesuaikan ukuran ikon dengan menu-item lainnya */
+    height: 16px;
+  }
+}
+
+/* Aturan dasar untuk header */
+.admin-header {
+  display: flex;
+  justify-content: space-between; /* Membuat elemen di dalam header berjauhan */
+  align-items: center;
+  padding: 24px 51px;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(195, 212, 233, 0.4);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: auto; /* Pindahkan ke kiri */
+}
+
+.page-title {
+  margin-left: auto; /* Pindahkan ke kanan */
+  font-size: 22px; /* Ukuran judul lebih kecil */
+  color: #1a202c;
+}
+
+/* Responsif untuk perangkat dengan lebar maksimal 768px */
+@media screen and (max-width: 768px) {
+  .admin-header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 14px;
+  }
+
+  .logo-container {
+    justify-content: flex-start; /* Pastikan logo tetap di sebelah kiri */
+    width: auto;
+  }
+
+  .page-title {
+    justify-content: flex-end; /* Pastikan judul tetap di sebelah kanan */
+    text-align: right;
+    width: auto;
+    font-size: 18px; /* Ukuran lebih kecil */
+  }
+}
+
+/* Responsif untuk perangkat dengan lebar maksimal 480px */
+@media screen and (max-width: 480px) {
+  .admin-header {
+    padding: 10px;
+  }
+
+  .logo {
+    width: 35px; /* Lebih kecil lagi */
+    height: 35px;
+  }
+
+  .company-name {
+    font-size: 16px; /* Lebih kecil lagi */
+  }
+
+  .page-title {
+    font-size: 14px; /* Lebih kecil lagi */
+  }
+}
+
+.menu-title {
+  color: rgba(148, 167, 203, 0.6);
+  font-size: 12px;
+  margin-bottom: 16px;
+  margin-left: 8px; /* Tambahkan margin kiri */
+}
+
+/* Responsif untuk perangkat dengan lebar maksimal 768px */
+@media screen and (max-width: 768px) {
+  .menu-title {
+    margin-left: 12px; /* Geser lebih ke kanan pada perangkat kecil */
+  }
+}
+
+/* Responsif untuk perangkat dengan lebar maksimal 480px */
+@media screen and (max-width: 480px) {
+  .menu-title {
+    margin-left: 16px; /* Geser lebih jauh ke kanan pada perangkat yang lebih kecil */
+  }
+}
+
+/* Style untuk title dan subtitle agar sama dengan Add Product, dengan jarak lebih dekat */
+
+/* Title */
+.section-title {
+  font-size: 20px; /* Ukuran yang sama dengan Add Product */
+  color: #1a202c;
+  margin-bottom: 12px; /* Kurangi jarak antara title dan subtitle */
+}
+
+/* Subtitle */
+.section-subtitle {
+  font-size: 16px; /* Ukuran subtitle */
+  color: #90a3bf;
+  margin-bottom: 16px; /* Sesuaikan jika diperlukan */
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 18px; /* Responsif untuk layar kecil */
+    margin-bottom: 10px; /* Kurangi jarak untuk layar kecil */
+  }
+
+  .section-subtitle {
+    font-size: 14px; /* Responsif untuk layar kecil */
+    margin-bottom: 14px; /* Sesuaikan jika diperlukan */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .section-title {
+    font-size: 16px; /* Responsif untuk layar lebih kecil */
+    margin-bottom: 8px; /* Kurangi jarak untuk layar lebih kecil */
+  }
+
+  .section-subtitle {
+    font-size: 12px; /* Responsif untuk layar lebih kecil */
+    margin-bottom: 12px; /* Sesuaikan jika diperlukan */
+  }
+}
+
+/* Style untuk Product & Category dan Information Titles */
+
+/* Title */
+.panel-title {
+  font-size: 20px; /* Sedikit lebih besar */
+  color: #1a202c;
+  margin-left: 15px; /* Geser lebih ke kanan */
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .panel-title {
+    font-size: 18px; /* Ukuran title untuk layar kecil */
+    margin-left: 12px; /* Geser lebih ke kanan untuk layar kecil */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .panel-title {
+    font-size: 16px; /* Ukuran title untuk layar lebih kecil */
+    margin-left: 10px; /* Geser lebih ke kanan untuk layar lebih kecil */
+  }
+}
+
+/* Jarak antara nama produk, kategori, dan harga */
+.product-name {
+  font-size: 16px;
+  color: #1a202c;
+  margin-bottom: 6px; /* Tambahkan jarak antara nama produk dan kategori produk */
+}
+
+.product-category {
+  font-size: 12px;
+  color: #90a3bf;
+  margin-bottom: 6px; /* Tambahkan jarak antara kategori produk dan harga */
+}
+
+.product-price {
+  font-size: 14px;
+  color: #1a202c;
+}
+
+/* Jarak antara nama informasi dan kategori informasi */
+.info-title {
+  font-size: 16px;
+  color: #1a202c;
+  margin-bottom: 6px; /* Tambahkan jarak antara nama informasi dan kategori informasi */
+}
+
+.info-category {
+  font-size: 12px;
+  color: #90a3bf;
+  margin-bottom: 6px; /* Tambahkan jarak antara kategori informasi dan detail lainnya */
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .product-name, .info-title {
+    font-size: 14px; /* Penyesuaian ukuran font untuk layar lebih kecil */
+    margin-bottom: 5px;
+  }
+
+  .product-category, .info-category {
+    font-size: 11px; /* Penyesuaian ukuran font untuk layar lebih kecil */
+    margin-bottom: 5px;
+  }
+
+  .product-price {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .product-name, .info-title {
+    font-size: 12px; /* Penyesuaian ukuran font untuk layar lebih kecil lagi */
+    margin-bottom: 4px;
+  }
+
+  .product-category, .info-category {
+    font-size: 10px; /* Penyesuaian ukuran font untuk layar lebih kecil lagi */
+    margin-bottom: 4px;
+  }
+
+  .product-price {
+    font-size: 12px;
+  }
+}
+
+/* Responsive Design for Edit & Delete Product Popup */
+@media screen and (max-width: 768px) {
+  .modal-content.large-modal-content {
+    width: 100%;
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  #editProductForm {
+    display: flex;
+    flex-direction: column; /* Mengatur ulang form menjadi satu kolom pada layar kecil */
+    gap: 15px; /* Jarak antara setiap form group */
+  }
+
+  #editProductForm .form-group {
+    width: 100%; /* Pastikan setiap form group mengambil seluruh lebar container */
+  }
+
+  #editProductForm .form-group input[type="text"],
+  #editProductForm .form-group input[type="number"],
+  #editProductForm .form-group input[type="file"] {
+    font-size: 14px; /* Ukuran font yang lebih kecil untuk layar kecil */
+    padding: 10px; /* Padding yang lebih kecil */
+    width: 100%; /* Mengambil lebar penuh form group */
+  }
+
+  #editProductForm img {
+    width: 100%; /* Gambar produk mengambil lebar penuh dari container */
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between; /* Atur tombol untuk berada dalam satu baris */
+    gap: 10px; /* Berikan jarak antara tombol */
+  }
+
+  .modal-buttons .delete-btn {
+    margin-left: auto; /* Pepetkan tombol delete ke kanan */
+    flex-grow: 0; /* Agar tombol delete tidak mengambil lebih banyak ruang */
+  }
+
+  .modal-buttons .submit-btn,
+  .modal-buttons .cancel-btn {
+    flex-grow: 1; /* Pastikan tombol Save dan Cancel tetap sama lebarnya */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #editProductForm .form-group input[type="text"],
+  #editProductForm .form-group input[type="number"],
+  #editProductForm .form-group input[type="file"] {
+    font-size: 12px; /* Lebih kecil lagi untuk layar sangat kecil */
+    padding: 8px; /* Perkecil padding lebih lanjut */
+  }
+
+  .modal-content.large-modal-content {
+    padding: 16px; /* Kurangi padding pada layar kecil */
+  }
+
+  .modal-buttons {
+    gap: 8px; /* Jarak lebih kecil antara tombol pada layar sangat kecil */
+  }
+
+  .modal-buttons .delete-btn {
+    margin-left: auto; /* Pastikan tombol delete tetap di ujung kanan */
+  }
+}
+
+/* Responsive Design for Edit & Delete Information Popup */
+@media screen and (max-width: 768px) {
+  .modal-content.large-modal-content {
+    width: 100%;
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  #editInformationForm {
+    display: flex;
+    flex-direction: column; /* Mengatur ulang form menjadi satu kolom pada layar kecil */
+    gap: 15px; /* Jarak antara setiap form group */
+  }
+
+  #editInformationForm .form-group {
+    width: 100%; /* Pastikan setiap form group mengambil seluruh lebar container */
+  }
+
+  #editInformationForm .form-group input[type="text"],
+  #editInformationForm .form-group textarea,
+  #editInformationForm .form-group input[type="file"] {
+    font-size: 14px; /* Ukuran font yang lebih kecil untuk layar kecil */
+    padding: 10px; /* Padding yang sama dengan bagian Product */
+    width: 100%; /* Mengambil lebar penuh form group */
+  }
+
+  #editInformationForm img {
+    width: 100%; /* Gambar informasi mengambil lebar penuh dari container */
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between; /* Atur tombol untuk berada dalam satu baris */
+    gap: 10px; /* Berikan jarak antara tombol */
+  }
+
+  .modal-buttons .submit-btn,
+  .modal-buttons .cancel-btn,
+  .modal-buttons .delete-btn {
+    padding: 10px 20px; /* Samakan padding dengan tombol pada bagian Product */
+    font-size: 16px; /* Samakan ukuran font dengan tombol pada bagian Product */
+  }
+
+  .modal-buttons .delete-btn {
+    margin-left: auto; /* Pepetkan tombol delete ke kanan */
+    flex-grow: 0; /* Agar tombol delete tidak mengambil lebih banyak ruang */
+  }
+
+  .modal-buttons .submit-btn,
+  .modal-buttons .cancel-btn {
+    flex-grow: 1; /* Pastikan tombol Save dan Cancel tetap sama lebarnya */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #editInformationForm .form-group input[type="text"],
+  #editInformationForm .form-group textarea,
+  #editInformationForm .form-group input[type="file"] {
+    font-size: 12px; /* Lebih kecil lagi untuk layar sangat kecil */
+    padding: 8px; /* Perkecil padding lebih lanjut */
+  }
+
+  .modal-content.large-modal-content {
+    padding: 16px; /* Kurangi padding pada layar kecil */
+  }
+
+  .modal-buttons {
+    gap: 8px; /* Jarak lebih kecil antara tombol pada layar sangat kecil */
+  }
+
+  .modal-buttons .submit-btn,
+  .modal-buttons .cancel-btn,
+  .modal-buttons .delete-btn {
+    padding: 8px 16px; /* Sesuaikan padding dengan ukuran layar yang lebih kecil */
+    font-size: 14px; /* Ukuran font lebih kecil untuk layar sangat kecil */
+  }
+
+  .modal-buttons .delete-btn {
+    margin-left: auto; /* Pastikan tombol delete tetap di ujung kanan */
+  }
+}
+.hidden-description {
+  display: none;
+}
+
+/* Modifikasi modal untuk layar lebih kecil */
+@media screen and (max-width: 768px) {
+  .modal-content.large-modal-content {
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8); /* Pusatkan modal dan kecilkan */
+    transform-origin: center center; /* Pertahankan posisi di tengah */
+    max-width: 90%; /* Lebar maksimum agar sesuai dengan layar */
+    height: auto; /* Sesuaikan tinggi modal dengan konten */
+    padding: 10px; /* Kurangi padding jika diperlukan */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal-content.large-modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.75); /* Pusatkan modal dan kecilkan lebih jauh */
+    transform-origin: center center; /* Pertahankan posisi di tengah */
+    max-width: 90%; /* Lebar maksimum agar sesuai dengan layar */
+    height: auto; /* Sesuaikan tinggi modal dengan konten */
+    padding: 8px; /* Kurangi padding untuk layar lebih kecil */
+  }
+}
+
+/* Mencegah halaman di-scroll ketika modal terbuka */
+body.modal-open {
+  overflow: hidden;
+}

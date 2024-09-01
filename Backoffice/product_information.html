@@ -36,7 +36,9 @@
           <span class="menu-text">Product & Information</span>
         </a>
         <div class="active-indicator"></div>
-        <a href="#" class="logout-item">
+
+        <!-- Logout Button di Sidebar -->
+        <a href="#" id="logoutBtn" class="logout-item">
           <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/aeb51ebd07fdca8df9f959611bf1c0e756eab3342012082e98fc78a63828a562?apiKey=c5ca74395eb04beca352be3a32114ffa&" alt="" class="menu-icon" />
           <span class="menu-text">Log Out</span>
         </a>
@@ -44,103 +46,364 @@
 
       <section class="main-section">
         <h3 class="section-title">Product & Information</h3>
+        <p class="section-subtitle">Edit & Delete Product & Information</p>
         <div class="dashboard-panels">
           <section class="recent-products">
             <div class="panel-header">
               <h3 class="panel-title">Product & Category</h3>
             </div>
-            <article class="product-item">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e307eb9abd87329a7ea8ceab7038f88b1de3eb7d8bbcab67db2b6d20a60c0d99?apiKey=c5ca74395eb04beca352be3a32114ffa&" alt="Nikon D800" class="product-image" />
-              <div class="product-info">
-                <h4 class="product-name">Nikon D800</h4>
-                <p class="product-category">Camera</p>
-              </div>
-              <div class="product-details">
-                <time class="product-date">20 July</time>
-                <p class="product-price">Rp. 200.000 / day</p>
-              </div>
-            </article>
-            <hr class="divider" />
-            <article class="product-item">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8058c9555ab7ec6256da1e2fcfd8ef6840fd0918d4dbce79df2171890a783310?apiKey=c5ca74395eb04beca352be3a32114ffa&" alt="Sony Tele Lens" class="product-image" />
-              <div class="product-info">
-                <h4 class="product-name">Sony Tele Lens</h4>
-                <p class="product-category">Lensa</p>
-              </div>
-              <div class="product-details">
-                <time class="product-date">20 July</time>
-                <p class="product-price">Rp. 200.000 / day</p>
-              </div>
-            </article>
-            <hr class="divider" />
-            <article class="product-item">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a96e9ac42835d100fde12ade5d47b563996f81f3df4f6dafc11c3772682d887?apiKey=c5ca74395eb04beca352be3a32114ffa&" alt="Camera Flashes" class="product-image" />
-              <div class="product-info">
-                <h4 class="product-name">Camera Flashes</h4>
-                <p class="product-category">Accessories</p>
-              </div>
-              <div class="product-details">
-                <time class="product-date">20 July</time>
-                <p class="product-price">Rp. 200.000 / day</p>
-              </div>
-            </article>
-            <hr class="divider" />
-            <article class="product-item">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/36da8c9f29e98783620f8953fd79eac77dca7c8f566b53ca08399c93acf02aeb?apiKey=c5ca74395eb04beca352be3a32114ffa&" alt="Go Pro Hero 6" class="product-image" />
-              <div class="product-info">
-                <h4 class="product-name">Go Pro Hero 6</h4>
-                <p class="product-category">Camera</p>
-              </div>
-              <div class="product-details">
-                <time class="product-date">20 July</time>
-                <p class="product-price">Rp. 200.000 / day</p>
-              </div>
-            </article>
+            <div id="product-list">
+              <!-- Produk akan di-render di sini -->
+            </div>
           </section>
 
           <section class="recent-info">
             <div class="panel-header">
               <h3 class="panel-title">Information</h3>
             </div>
-            <article class="info-item">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/14ffe3b399bc7f097dc042198f7d54496b47339730655d7402d156dd10efe647?apiKey=c5ca74395eb04beca352be3a32114ffa&" alt="Information 1" class="info-image" />
-              <div class="info-content">
-                <h4 class="info-title">Information 1</h4>
-                <p class="info-category">Information</p>
-              </div>
-              <time class="info-date">20 July</time>
-            </article>
-            <hr class="divider" />
-            <article class="info-item">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3362c595e0aa093f8542ab66552d654e67a781aab44504975a6a0621235c57ad?apiKey=c5ca74395eb04beca352be3a32114ffa&" alt="Information 2" class="info-image" />
-              <div class="info-content">
-                <h4 class="info-title">Information 2</h4>
-                <p class="info-category">Information</p>
-              </div>
-              <time class="info-date">19 July</time>
-            </article>
-            <hr class="divider" />
-            <article class="info-item">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/45fe85d16c4f6fb392fb661a00a48825c4b6c009a8a497d45c398c776f6f39eb?apiKey=c5ca74395eb04beca352be3a32114ffa&" alt="Information 3" class="info-image" />
-              <div class="info-content">
-                <h4 class="info-title">Information 3</h4>
-                <p class="info-category">Information</p>
-              </div>
-              <time class="info-date">18 July</time>
-            </article>
-            <hr class="divider" />
-            <article class="info-item">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3f307dfdee33a2c7ecd0147ac549ae63c181b8cf087bdd619f1a14d5b999d436?apiKey=c5ca74395eb04beca352be3a32114ffa&" alt="Information 4" class="info-image" />
-              <div class="info-content">
-                <h4 class="info-title">Information 4</h4>
-                <p class="info-category">Information</p>
-              </div>
-              <time class="info-date">17 July</time>
-            </article>
+            <div id="information-list">
+              <!-- Informasi akan di-render di sini -->
+            </div>
           </section>
         </div>
       </section>
     </div>
   </main>
+
+  <!-- Modal untuk konfirmasi logout -->
+  <div id="logoutModal" class="modal">
+    <div class="modal-content">
+      <p>Are you sure you want to log out?</p>
+      <button id="confirmLogout" class="logout-btn">Log Out</button>
+      <button id="cancelLogout" class="cancel-btn">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Popup Modal untuk Edit & Delete Product -->
+  <div id="editProductModal" class="modal">
+    <div class="modal-content large-modal-content">
+      <h2>Edit & Delete Product</h2>
+      <form id="editProductForm">
+        <div class="form-group">
+          <label for="edit-product-name">Product Name</label>
+          <input type="text" id="edit-product-name" required>
+        </div>
+        <div class="form-group">
+          <label for="edit-category">Category</label>
+          <input type="text" id="edit-category" required>
+        </div>
+        <div class="form-group">
+          <label for="edit-price">Price /day</label>
+          <input type="text" id="edit-price" required>
+        </div>
+        <div class="form-group">
+          <label for="edit-stock">Stock</label>
+          <input type="number" id="edit-stock" required>
+        </div>
+        <div class="form-group full-width">
+          <label for="edit-description">Description</label>
+          <textarea id="edit-description" required></textarea>
+        </div>
+        <div class="form-group full-width">
+          <label for="edit-image">Image</label>
+          <input type="file" id="edit-image" onchange="updateProductImagePreview(this)">
+          <img id="current-product-image" src="" alt="Product Image">
+        </div>
+        <div class="modal-buttons">
+          <button type="button" class="submit-btn" onclick="saveProduct()">Save</button>
+          <button type="button" class="cancel-btn" onclick="closeEditProductModal()">Cancel</button>
+          <button type="button" class="delete-btn" onclick="deleteProduct()">Delete Product</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Popup Modal untuk Edit & Delete Information -->
+  <div id="editInformationModal" class="modal">
+    <div class="modal-content large-modal-content">
+      <h2>Edit & Delete Information</h2>
+      <form id="editInformationForm">
+        <div class="form-group">
+          <label for="edit-info-title">Title</label>
+          <input type="text" id="edit-info-title" required>
+        </div>
+        <div class="form-group">
+          <label for="edit-info-category">Information Category</label>
+          <input type="text" id="edit-info-category" required>
+        </div>
+        <div class="form-group">
+          <label for="edit-description">Description</label>
+          <textarea id="edit-description" required></textarea>
+        </div>
+        <div class="form-group full-width">
+          <label for="edit-info-image">Image</label>
+          <input type="file" id="edit-info-image" onchange="updateInfoImagePreview(this)">
+          <img id="current-info-image" src="" alt="Information Image">
+        </div>
+        <div class="modal-buttons">
+          <button type="button" class="submit-btn" onclick="saveInformation()">Save</button>
+          <button type="button" class="cancel-btn" onclick="closeEditInformationModal()">Cancel</button>
+          <button type="button" class="delete-btn" onclick="deleteInformation()">Delete Information</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    var editingProductIndex = null;
+    var editingInformationIndex = null;
+
+    // Mendapatkan elemen modal logout
+    var logoutModal = document.getElementById("logoutModal");
+
+    // Mendapatkan tombol yang membuka modal logout
+    var logoutBtn = document.getElementById("logoutBtn");
+
+    // Mendapatkan tombol cancel di dalam modal
+    var cancelLogoutBtn = document.getElementById("cancelLogout");
+
+    // Mendapatkan tombol confirm logout di dalam modal
+    var confirmLogoutBtn = document.getElementById("confirmLogout");
+
+    // Ketika tombol logout diklik, buka modal
+    logoutBtn.onclick = function(event) {
+        event.preventDefault(); // Mencegah link default
+        logoutModal.style.display = "flex";
+    }
+
+    // Ketika tombol cancel diklik, tutup modal
+    cancelLogoutBtn.onclick = function() {
+        logoutModal.style.display = "none";
+    }
+
+    // Ketika tombol confirm logout diklik, arahkan ke login.html
+    confirmLogoutBtn.onclick = function() {
+        window.location.href = "../Login/login.html";
+    }
+
+    // Function to open the Edit Product Modal
+    function openEditProductModal(product, index) {
+      var modal = document.getElementById("editProductModal");
+      modal.style.display = "flex";
+
+      editingProductIndex = index;
+
+      // Fill form with product data
+      document.getElementById("edit-product-name").value = product.name;
+      document.getElementById("edit-category").value = product.category;
+      document.getElementById("edit-price").value = product.price;
+      document.getElementById("edit-stock").value = product.stock;
+      document.getElementById("edit-description").value = product.description;
+      document.getElementById("current-product-image").src = product.image;
+
+      // Apply Rupiah formatting to the price field
+      document.getElementById("edit-price").addEventListener("input", function(e) {
+        this.value = formatRupiah(this.value, "Rp. ");
+      });
+    }
+
+    // Function to close the Edit Product Modal
+    function closeEditProductModal() {
+      var modal = document.getElementById("editProductModal");
+      modal.style.display = "none";
+    }
+
+    // Function to open the Edit Information Modal
+    function openEditInformationModal(info, index) {
+      var modal = document.getElementById("editInformationModal");
+      modal.style.display = "flex";
+
+      editingInformationIndex = index;
+
+      // Fill form with information data
+      document.getElementById("edit-info-title").value = info.title;
+      document.getElementById("edit-info-category").value = info.category;
+      document.getElementById("edit-description").value = info.description;
+      document.getElementById("current-info-image").src = info.image;
+    }
+
+    // Function to close the Edit Information Modal
+    function closeEditInformationModal() {
+      var modal = document.getElementById("editInformationModal");
+      modal.style.display = "none";
+    }
+
+    // Function to save product
+    function saveProduct() {
+      const products = JSON.parse(localStorage.getItem('products')) || [];
+      const editedProduct = {
+        name: document.getElementById('edit-product-name').value,
+        category: document.getElementById('edit-category').value,
+        price: document.getElementById('edit-price').value,
+        stock: document.getElementById('edit-stock').value,
+        description: document.getElementById('edit-description').value,
+        image: document.getElementById('current-product-image').src
+      };
+
+      if (editingProductIndex !== null) {
+        products[editingProductIndex] = editedProduct;
+      } else {
+        products.push(editedProduct);
+      }
+
+      localStorage.setItem('products', JSON.stringify(products));
+      closeEditProductModal();
+      renderProducts(); // Update tampilan produk
+    }
+
+    // Function to save information
+    function saveInformation() {
+      const informations = JSON.parse(localStorage.getItem('informations')) || [];
+      const editedInformation = {
+        title: document.getElementById('edit-info-title').value,
+        category: document.getElementById('edit-info-category').value,
+        description: document.getElementById('edit-description').value,
+        image: document.getElementById('current-info-image').src
+      };
+
+      if (editingInformationIndex !== null) {
+        informations[editingInformationIndex] = editedInformation;
+      } else {
+        informations.push(editedInformation);
+      }
+
+      localStorage.setItem('informations', JSON.stringify(informations));
+      closeEditInformationModal();
+      renderInformations(); // Update tampilan informasi
+    }
+
+    // Function to delete product
+    function deleteProduct() {
+      const products = JSON.parse(localStorage.getItem('products')) || [];
+
+      if (editingProductIndex !== null) {
+        products.splice(editingProductIndex, 1);
+        localStorage.setItem('products', JSON.stringify(products));
+        closeEditProductModal();
+        renderProducts(); // Update tampilan produk
+        editingProductIndex = null; // Reset index setelah menghapus
+      }
+    }
+
+    // Function to delete information
+    function deleteInformation() {
+      const informations = JSON.parse(localStorage.getItem('informations')) || [];
+
+      if (editingInformationIndex !== null) {
+        informations.splice(editingInformationIndex, 1);
+        localStorage.setItem('informations', JSON.stringify(informations));
+        closeEditInformationModal();
+        renderInformations(); // Update tampilan informasi
+        editingInformationIndex = null; // Reset index setelah menghapus
+      }
+    }
+
+    // Function to update product image preview
+    function updateProductImagePreview(input) {
+      const file = input.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          document.getElementById('current-product-image').src = e.target.result;
+        }
+        reader.readAsDataURL(file);
+      }
+    }
+
+    // Function to update information image preview
+    function updateInfoImagePreview(input) {
+      const file = input.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          document.getElementById('current-info-image').src = e.target.result;
+        }
+        reader.readAsDataURL(file);
+      }
+    }
+
+    // Function to format Rupiah
+    function formatRupiah(angka, prefix) {
+      var number_string = angka.replace(/[^,\d]/g, "").toString(),
+        split = number_string.split(","),
+        sisa = split[0].length % 3,
+        rupiah = split[0].substr(0, sisa),
+        ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+
+      if (ribuan) {
+        separator = sisa ? "." : "";
+        rupiah += separator + ribuan.join(".");
+      }
+
+      rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
+      return prefix == undefined ? rupiah : rupiah ? "Rp. " + rupiah : "";
+    }
+
+    // Render produk dari localStorage
+    function renderProducts() {
+      const productList = document.getElementById('product-list');
+      const products = JSON.parse(localStorage.getItem('products')) || [];
+
+      productList.innerHTML = ''; // Clear the list first
+
+      products.forEach((product, index) => {
+        const productItem = document.createElement('article');
+        productItem.classList.add('product-item');
+
+        // Validasi URL gambar
+        const imageURL = product.image || ''; 
+
+        productItem.innerHTML = `
+          <img src="${imageURL}" alt="${product.name}" class="product-image">
+          <div class="product-info">
+            <h4 class="product-name">${product.name}</h4>
+            <p class="product-category">${product.category}</p>
+            <p class="hidden-description">${product.description || ''}</p>
+          </div>
+          <div class="product-details">
+            <p class="product-price">${product.price} /day</p>
+          </div>
+        `;
+
+        // Set up click event to open the edit modal
+        productItem.addEventListener('click', () => openEditProductModal(product, index));
+
+        productList.appendChild(productItem);
+      });
+    }
+
+    // Render informasi dari localStorage
+    function renderInformations() {
+      const informationList = document.getElementById('information-list');
+      const informations = JSON.parse(localStorage.getItem('informations')) || [];
+
+      informationList.innerHTML = ''; // Clear the list first
+
+      informations.forEach((info, index) => {
+        const infoItem = document.createElement('article');
+        infoItem.classList.add('info-item');
+
+        // Validasi URL gambar
+        const imageURL = info.image || ''; 
+
+        infoItem.innerHTML = `
+          <img src="${imageURL}" alt="${info.title}" class="info-image">
+          <div class="info-content">
+            <h4 class="info-title">${info.title}</h4>
+            <p class="info-category">${info.category}</p>
+          </div>
+        `;
+
+        // Set up click event to open the edit modal
+        infoItem.addEventListener('click', () => openEditInformationModal(info, index));
+
+        informationList.appendChild(infoItem);
+      });
+    }
+
+    // Panggil fungsi render
+    renderProducts();
+    renderInformations();
+  </script>
 </body>
 </html>

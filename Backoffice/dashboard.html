@@ -36,7 +36,7 @@
           <span class="menu-text">Product & Information</span>
         </a>
         <div class="active-indicator"></div>
-        <a href="#" class="logout-item">
+        <a href="#" id="logoutBtn" class="logout-item">
           <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/aeb51ebd07fdca8df9f959611bf1c0e756eab3342012082e98fc78a63828a562?apiKey=c5ca74395eb04beca352be3a32114ffa&" alt="" class="menu-icon" />
           <span class="menu-text">Log Out</span>
         </a>
@@ -57,102 +57,131 @@
         <div class="dashboard-panels">
           <section class="recent-products">
             <div class="panel-header">
-              <h3 class="panel-title">Our Product</h3>
+              <h3 class="panel-title">Added Product</h3>
               <a href="product_information.html" class="view-all">View All</a>
             </div>
-            <article class="product-item">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e307eb9abd87329a7ea8ceab7038f88b1de3eb7d8bbcab67db2b6d20a60c0d99?apiKey=c5ca74395eb04beca352be3a32114ffa&" alt="Nikon D800" class="product-image" />
-              <div class="product-info">
-                <h4 class="product-name">Nikon D800</h4>
-                <p class="product-category">Camera</p>
-              </div>
-              <div class="product-details">
-                <time class="product-date">20 July</time>
-                <p class="product-price">Rp. 200.000 / day</p>
-              </div>
-            </article>
-            <hr class="divider" />
-            <article class="product-item">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8058c9555ab7ec6256da1e2fcfd8ef6840fd0918d4dbce79df2171890a783310?apiKey=c5ca74395eb04beca352be3a32114ffa&" alt="Sony Tele Lens" class="product-image" />
-              <div class="product-info">
-                <h4 class="product-name">Sony Tele Lens</h4>
-                <p class="product-category">Lensa</p>
-              </div>
-              <div class="product-details">
-                <time class="product-date">20 July</time>
-                <p class="product-price">Rp. 200.000 / day</p>
-              </div>
-            </article>
-            <hr class="divider" />
-            <article class="product-item">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a96e9ac42835d100fde12ade5d47b563996f81f3df4f6dafc11c3772682d887?apiKey=c5ca74395eb04beca352be3a32114ffa&" alt="Camera Flashes" class="product-image" />
-              <div class="product-info">
-                <h4 class="product-name">Camera Flashes</h4>
-                <p class="product-category">Accessories</p>
-              </div>
-              <div class="product-details">
-                <time class="product-date">20 July</time>
-                <p class="product-price">Rp. 200.000 / day</p>
-              </div>
-            </article>
-            <hr class="divider" />
-            <article class="product-item">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/36da8c9f29e98783620f8953fd79eac77dca7c8f566b53ca08399c93acf02aeb?apiKey=c5ca74395eb04beca352be3a32114ffa&" alt="Go Pro Hero 6" class="product-image" />
-              <div class="product-info">
-                <h4 class="product-name">Go Pro Hero 6</h4>
-                <p class="product-category">Camera</p>
-              </div>
-              <div class="product-details">
-                <time class="product-date">20 July</time>
-                <p class="product-price">Rp. 200.000 / day</p>
-              </div>
-            </article>
+            <div id="dashboard-product-list">
+              <!-- Produk akan di-render di sini -->
+            </div>
           </section>
 
           <section class="recent-info">
             <div class="panel-header">
-              <h3 class="panel-title">Our Information</h3>
+              <h3 class="panel-title">Added Information</h3>
               <a href="product_information.html" class="view-all">View All</a>
             </div>
-            <article class="info-item">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/14ffe3b399bc7f097dc042198f7d54496b47339730655d7402d156dd10efe647?apiKey=c5ca74395eb04beca352be3a32114ffa&" alt="Information 1" class="info-image" />
-              <div class="info-content">
-                <h4 class="info-title">Information 1</h4>
-                <p class="info-category">Information</p>
-              </div>
-              <time class="info-date">20 July</time>
-            </article>
-            <hr class="divider" />
-            <article class="info-item">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3362c595e0aa093f8542ab66552d654e67a781aab44504975a6a0621235c57ad?apiKey=c5ca74395eb04beca352be3a32114ffa&" alt="Information 2" class="info-image" />
-              <div class="info-content">
-                <h4 class="info-title">Information 2</h4>
-                <p class="info-category">Information</p>
-              </div>
-              <time class="info-date">19 July</time>
-            </article>
-            <hr class="divider" />
-            <article class="info-item">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/45fe85d16c4f6fb392fb661a00a48825c4b6c009a8a497d45c398c776f6f39eb?apiKey=c5ca74395eb04beca352be3a32114ffa&" alt="Information 3" class="info-image" />
-              <div class="info-content">
-                <h4 class="info-title">Information 3</h4>
-                <p class="info-category">Information</p>
-              </div>
-              <time class="info-date">18 July</time>
-            </article>
-            <hr class="divider" />
-            <article class="info-item">
-              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3f307dfdee33a2c7ecd0147ac549ae63c181b8cf087bdd619f1a14d5b999d436?apiKey=c5ca74395eb04beca352be3a32114ffa&" alt="Information 4" class="info-image" />
-              <div class="info-content">
-                <h4 class="info-title">Information 4</h4>
-                <p class="info-category">Information</p>
-              </div>
-              <time class="info-date">17 July</time>
-            </article>
+            <div id="dashboard-information-list">
+              <!-- Informasi akan di-render di sini -->
+            </div>
           </section>
         </div>
       </section>
     </div>
   </main>
+
+  <!-- Modal untuk konfirmasi logout -->
+  <div id="logoutModal" class="modal">
+    <div class="modal-content">
+      <p>Are you sure you want to log out?</p>
+      <button id="confirmLogout" class="logout-btn">Log Out</button>
+      <button id="cancelLogout" class="cancel-btn">Cancel</button>
+    </div>
+  </div>
+
+  <script>
+    // Mendapatkan elemen modal
+    var modal = document.getElementById("logoutModal");
+
+    // Mendapatkan tombol yang membuka modal
+    var btn = document.getElementById("logoutBtn");
+
+    // Mendapatkan tombol cancel di dalam modal
+    var cancelBtn = document.getElementById("cancelLogout");
+
+    // Mendapatkan tombol confirm logout di dalam modal
+    var confirmBtn = document.getElementById("confirmLogout");
+
+    // Ketika tombol logout diklik, buka modal
+    btn.onclick = function(event) {
+        event.preventDefault(); // Mencegah link default
+        modal.style.display = "flex";
+    }
+
+    // Ketika tombol cancel diklik, tutup modal
+    cancelBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Ketika tombol confirm logout diklik, arahkan ke login.html
+    confirmBtn.onclick = function() {
+        window.location.href = "../Login/login.html";
+    }
+
+    // Ketika pengguna mengklik di luar modal, tutup modal
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Render produk dari localStorage ke dashboard
+    function renderDashboardProducts() {
+      const productList = document.getElementById('dashboard-product-list');
+      const products = JSON.parse(localStorage.getItem('products')) || [];
+
+      productList.innerHTML = ''; // Clear the list first
+
+      products.forEach((product) => {
+        const productItem = document.createElement('article');
+        productItem.classList.add('product-item');
+
+        // Validasi URL gambar
+        const imageURL = product.image || ''; 
+
+        productItem.innerHTML = `
+          <img src="${imageURL}" alt="${product.name}" class="product-image">
+          <div class="product-info">
+            <h4 class="product-name">${product.name}</h4>
+            <p class="product-category">${product.category}</p>
+          </div>
+          <div class="product-details">
+            <p class="product-price">${product.price} /day</p>
+          </div>
+        `;
+
+        productList.appendChild(productItem);
+      });
+    }
+
+    // Render informasi dari localStorage ke dashboard
+    function renderDashboardInformations() {
+      const informationList = document.getElementById('dashboard-information-list');
+      const informations = JSON.parse(localStorage.getItem('informations')) || [];
+
+      informationList.innerHTML = ''; // Clear the list first
+
+      informations.forEach((info) => {
+        const infoItem = document.createElement('article');
+        infoItem.classList.add('info-item');
+
+        // Validasi URL gambar
+        const imageURL = info.image || ''; 
+
+        infoItem.innerHTML = `
+          <img src="${imageURL}" alt="${info.title}" class="info-image">
+          <div class="info-content">
+            <h4 class="info-title">${info.title}</h4>
+            <p class="info-category">${info.category}</p>
+          </div>
+        `;
+
+        informationList.appendChild(infoItem);
+      });
+    }
+
+    // Panggil fungsi render saat halaman dimuat
+    renderDashboardProducts();
+    renderDashboardInformations();
+  </script>
 </body>
 </html>

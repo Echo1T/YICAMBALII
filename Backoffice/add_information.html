@@ -36,7 +36,7 @@
           <span class="menu-text">Product & Information</span>
         </a>
         <div class="active-indicator"></div>
-        <a href="#" class="logout-item">
+        <a href="#" id="logoutBtn" class="logout-item">
           <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/aeb51ebd07fdca8df9f959611bf1c0e756eab3342012082e98fc78a63828a562?apiKey=c5ca74395eb04beca352be3a32114ffa&" alt="" class="menu-icon" />
           <span class="menu-text">Log Out</span>
         </a>
@@ -45,27 +45,117 @@
       <section class="main-section">
         <h3 class="section-title">Add Information</h3>
         <p class="section-subtitle">Please enter your information detail</p>
-        <form class="information-form">
+        <form class="information-form" id="informationForm">
           <div class="form-group">
             <label for="title">Title</label>
-            <input type="text" id="title" placeholder="Promo for blablablabla">
+            <input type="text" id="title" placeholder="Title Information" required>
           </div>
           <div class="form-group">
             <label for="category">Information Category</label>
-            <input type="text" id="category" placeholder="Information Category">
+            <input type="text" id="category" placeholder="Information Category" required>
           </div>
           <div class="form-group full-width">
             <label for="description">Description</label>
-            <textarea id="description" placeholder="Haloo"></textarea>
+            <textarea id="description" placeholder="Description" required></textarea>
           </div>
           <div class="form-group full-width">
             <label for="image-upload">Add Image</label>
-            <input type="file" id="image-upload">
+            <input type="file" id="image-upload" accept="image/*" required>
+            <p id="image-error" style="color: red; display: none;">Image dimensions must be at least 300x300 pixels.</p>
           </div>
           <button type="submit" class="submit-btn">Add Information</button>
         </form>
       </section>
     </div>
   </main>
+
+  <!-- Modal untuk konfirmasi logout -->
+  <div id="logoutModal" class="modal">
+    <div class="modal-content">
+      <p>Are you sure you want to log out?</p>
+      <button id="confirmLogout" class="logout-btn">Log Out</button>
+      <button id="cancelLogout" class="cancel-btn">Cancel</button>
+    </div>
+  </div>
+
+  <script>
+    // Mendapatkan elemen modal
+    var modal = document.getElementById("logoutModal");
+
+    // Mendapatkan tombol yang membuka modal
+    var btn = document.getElementById("logoutBtn");
+
+    // Mendapatkan tombol cancel di dalam modal
+    var cancelBtn = document.getElementById("cancelLogout");
+
+    // Mendapatkan tombol confirm logout di dalam modal
+    var confirmBtn = document.getElementById("confirmLogout");
+
+    // Ketika tombol logout diklik, buka modal
+    btn.onclick = function(event) {
+        event.preventDefault(); // Mencegah link default
+        modal.style.display = "flex";
+    }
+
+    // Ketika tombol cancel diklik, tutup modal
+    cancelBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Ketika tombol confirm logout diklik, arahkan ke login.html
+    confirmBtn.onclick = function() {
+        window.location.href = "../Login/login.html";
+    }
+
+    // Validasi ukuran gambar
+    document.getElementById('image-upload').addEventListener('change', function(event) {
+      const file = event.target.files[0];
+      const img = new Image();
+      const imageError = document.getElementById('image-error');
+      imageError.style.display = 'none';
+
+      img.onload = function() {
+        if (img.width < 300 || img.height < 300) {
+          imageError.style.display = 'block';
+          event.target.value = ''; // Clear the input
+        }
+      };
+      if (file) {
+        img.src = URL.createObjectURL(file);
+      }
+    });
+
+    // Menangani pengiriman formulir informasi
+    document.getElementById('informationForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // Mencegah form untuk reload halaman
+
+      // Mengambil data dari form
+      const title = document.getElementById('title').value;
+      const category = document.getElementById('category').value;
+      const description = document.getElementById('description').value;
+      const image = document.getElementById('image-upload').files[0];
+
+      const reader = new FileReader();
+      reader.onloadend = function() {
+        const information = {
+          title: title,
+          category: category,
+          description: description,
+          image: reader.result
+        };
+
+        // Simpan data ke localStorage
+        let informations = JSON.parse(localStorage.getItem('informations')) || [];
+        informations.push(information);
+        localStorage.setItem('informations', JSON.stringify(informations));
+
+        // Redirect ke halaman Product & Information
+        window.location.href = 'product_information.html';
+      };
+      if (image) {
+        reader.readAsDataURL(image);
+      }
+    });
+  </script>
 </body>
 </html>

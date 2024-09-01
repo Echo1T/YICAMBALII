@@ -9,7 +9,7 @@
 <body>
     <header class="admin-header">
         <div class="logo-container">
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/802f415fd648f5fe376581a94acb9c5e76a267cc513834179c5e1ed2e0fb6039?apiKey=c5ca74395eb04beca352be3a32114ffa&" class="logo" alt="YICAM BALI logo" />
+            <img loading="lazy" src="logo.png" class="logo" alt="YICAM BALI logo" />
             <h1 class="company-name">YICAM BALI</h1>
         </div>
         <h2 class="app-name">Admin Backoffice</h2>
@@ -31,5 +31,36 @@
             </form>
         </div>
     </main>
+    <script>
+        document.querySelector('.signin-form').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('http://localhost:3000/api/auth/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, password })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    alert('Login successful!');
+                    localStorage.setItem('token', data.token);
+                    window.location.href = '/dashboard.html';
+                } else {
+                    alert('Login failed: ' + data.message);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while trying to log in.');
+            }
+        });
+    </script>
 </body>
 </html>
