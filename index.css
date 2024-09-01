@@ -28,3 +28,9 @@
     background-image: url('Assets/BG2.png');
     background-repeat:repeat-y;
 }
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
